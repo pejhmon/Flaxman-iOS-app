@@ -19,7 +19,7 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-.overlay{
+
     h1 {
         color:white;
         font-size:22px;
@@ -29,7 +29,15 @@
         padding:0px;
         text-align:center;
     }
-}
+    h2{
+        color:black;
+        font-size:14px;
+        font-weight:normal;
+        margin:0px;
+        overflow:visible;
+        padding:0px;
+        text-align:left;
+    }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -56,15 +64,31 @@ body {
     width:100%;
 }
 
+.header {
+    position: fixed;
+    background:url(../img/uclLogo.png) no-repeat right top;
+    position:fixed;
+    background-size: 120%;
+    left:0%;
+    top:0%;
+}
+
+.item{
+    display:inline-block;
+    padding:25px 0px 0px 180px;
+    margin:0px;
+    color:white;
+}
+
 /* Portrait layout (default) */
 .app {
-    background:url(../img/uclLogo.png) no-repeat center top; /* 170px x 200px */
-    position:fixed;/* position in the center of the screen */
+/*    background:url(../img/uclLogo.png) no-repeat center top;  170px x 200px 
+    position:fixed; position in the center of the screen 
     background-size: 350px;
     left:20%;
-    top:22%;
+    top:22%;*/
     height:200px;                   /* text area height */
-    width:400px;                   /* text area width */
+    width:435px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
