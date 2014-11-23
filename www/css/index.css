@@ -29,6 +29,7 @@
         padding:0px;
         text-align:center;
     }
+    
     h2{
         color:black;
         font-size:14px;
@@ -70,15 +71,60 @@ body {
     position:fixed;
     background-size: 120%;
     left:0%;
-    top:0%;
+    top:-2%;
 }
-
+/*Flaxman Gallery logo*/
 .item{
     display:inline-block;
-    padding:25px 0px 0px 180px;
+    padding:30px 0px 0px 175px;
     margin:0px;
     color:white;
 }
+.button{
+display: inline-block;
+padding: 100px 0px;
+}
+/*.menu {
+    color: white;
+}*/
+/*.menu.nav-bar{
+    list-style: none;
+    margin-top: 30px;
+}
+li is list item
+.menu.nav-bar li{
+    display: inline;
+    padding: 0 10px;
+    color:white;
+}
+a is hyperlink
+.menu.nav-bar li a{
+    text-decoration: none;
+    padding-left: 25px;
+    text-transform: uppercase;
+    color:white;
+    text-shadow: 1px 1px 1px #A7A7A7;
+}
+.nav-bar.nav-button-home a{
+    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif")
+        no-repeat 0px -2px transparent;
+}
+.nav-bar.nav-button-services a{
+    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif")
+        no-repeat 0px -2px transparent;
+}
+
+.nav-bar.nav-button-products a{
+    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif")
+        no-repeat 0px -2px transparent;
+}*/
+
+/*.subitem{
+    display:inline-block;
+    padding:42px 0px 0px 0px;
+    margin:0px;
+    color:white;
+}*/
 
 /* Portrait layout (default) */
 .app {

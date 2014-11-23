@@ -30,8 +30,8 @@
         <style>
             ul {
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
+                margin:0;
+                padding:0;
             }
 
             li {
@@ -40,21 +40,37 @@
         </style>
     </head>
     <body>
-        <h1>Flaxman Art Gallery</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-        <div class="app">
-            
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div class="header">
+            <div class="item">Flaxman Art Gallery
             </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
-</html>
+
+            <!--<div class="subitem">Submenu 1 Submenu2</div>-->
+            <div class ="menu">
+                <form action="home.html">
+                    <input type="submit" value="Home"><img src="">
+                    <form/>
+                    <form action="Search.html">
+                        <input type="submit" data-icon="&#x25a8;"><img src="">
+                        <form/>
+                        <form action="AppleMap.html">
+                            <input type="submit" value="GPS"><img src="">
+                            <form/>
+                            <div/>
+                            <!--<nav id="menu">
+                                    <ul class="nav-bar">
+                                        <li class="home">home<a href="#home"></a></li>
+                                        <li class="search"><a href="#search"></a></li>
+                                        <li class="GPS"><a href="#gps"></a></li>
+                                    </ul>
+                            </nav>-->
+                            <div class="app">
+
+                                <div id="deviceready" class="blink">
+                                    <p class="event listening">Connecting to Device</p>
+                                    <p class="event received">Device is Ready</p>
+                                </div>
+                            </div>
+                            <script type="text/javascript" src="cordova.js"></script>
+                            <script type="text/javascript" src="js/index.js"></script>
+                            </body>
+                            </html>
