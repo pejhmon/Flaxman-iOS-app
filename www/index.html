@@ -27,7 +27,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>UCL Flaxman Art Gallery</title>
         <style>
             ul {
                 list-style-type: none;
@@ -42,17 +42,20 @@
     </head>
     <body>
         <div class="header">
-            <div class="item">Flaxman Art Gallery
-        </div>
+            <div class="item">Flaxman Art Gallery</div>
+            <div class="container">     <!-- Buttons -->
+                <!--
+                <a href="map.html" class="button"><img src="GPS.png"></a>
+                <a href="home.html" class="button"><img src="Home.png"></a>
+                <a href="search.html" class="button"><img src="Search.png"></a>
+                -->
 
-        <div class="container">     <!-- Buttons -->
-            <a href="map.html" class="button"><img src="GPS.png"></a>
-            <a href="home.html" class="button"><img src="Home.png"></a>
-            <a href="search.html" class="button"><img src="Search.png"></a>
-        </div>
-
-<!--        <div class ="menu">
-            <form action="home.html">
+                <a href="map.html" ><img src="GPS.png" alt="Seal"></a>
+                <a href="home.html" ><img src="Home.png" border='0'></a>
+                <a href="search.html" ><img src="Search.png" border='0'></a>
+            </div>
+            <div class ="menu">
+                <form action="home.html">
                     <input type="submit" class="home3" value="&#xe604">
                 </form>
                 <form action="Search.html">
@@ -62,21 +65,25 @@
                     <input type="submit" class="gps" value="&#xe609">
                 </form>
             </div>
-        </div>-->
-        
-        <!--<nav id="menu">
-                <ul class="nav-bar">
-                    <li class="home">home<a href="#home"></a></li>
-                    <li class="search"><a href="#search"></a></li>
-                    <li class="GPS"><a href="#gps"></a></li>
-                </ul>
-        </nav>-->
-        <div class="app">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+            <div style=""><br/><br/>
+                <p>List of links (temporary)</p>
+                <a href="AppleMap.html" class="button">Apple Map</a><br/>
+                <a href="home.html" class="button">Home</a><br/>
+                <a href="Search.html" class="button">Search</a><br/>
+                <a href="Details.html" class="button">Details</a><br/>
+                <a href="UCLmap.html" class="button">UCL map</a><br/>
             </div>
+            <div class="app">
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Connecting to Device</p>
+                    <p class="event received">Device is Ready</p>
+                </div>
+            </div>
+            
         </div>
+        
+        
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
