@@ -57,7 +57,7 @@ body {
         );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:4.5vmin;
     height:100%;
     margin:0px;
     padding:0px;
@@ -66,23 +66,51 @@ body {
 }
 
 .header {
-    position: fixed;
+    //position: fixed;
     background:url(../img/uclLogo.png) no-repeat right top;
-    position:fixed;
     background-size: 120%;
     left:0%;
-    top:-2%;
+    top: auto;
+    width: -2%;
+    height:auto;
 }
 /*Flaxman Gallery logo*/
 .item{
     display:inline-block;
-    padding:30px 0px 0px 175px;
+    padding:5% 0% 0% 2%;
     margin:0px;
     color:white;
 }
+.container {
+    overflow: hidden;
+}
 .button{
-display: inline-block;
-padding: 100px 0px;
+    appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    text-decoration: none; 
+    color: ButtonText;
+    display: inline-block; 
+    padding: 2px 2px;
+}
+.Headerbtn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 5vmin;
+    background: #222222;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border: 0px;
+}
+.Headerbtn:hover {
+    background: #4D224F;
+    text-decoration: none;
+}
+form{
+    display: inline;
 }
 /*.menu {
     color: white;
@@ -134,7 +162,7 @@ a is hyperlink
     left:20%;
     top:22%;*/
     height:200px;                   /* text area height */
-    width:435px;                   /* text area width */
+    //width:435px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
@@ -183,7 +211,32 @@ a is hyperlink
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?qj0hqs');
+	src:url('../fonts/icomoon.eot?#iefixqj0hqs') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?qj0hqs') format('woff'),
+		url('../fonts/icomoon.ttf?qj0hqs') format('truetype'),
+		url('../fonts/icomoon.svg?qj0hqs#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
+input[type="submit"]{
+    font-family: 'icomoon';
+}
+
+[data-icon]:before {
+        font-family: 'icomoon';
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+    
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
