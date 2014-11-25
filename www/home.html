@@ -5,55 +5,75 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<style>
-div.img {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #0000ff;
-    height: auto;
-    width: auto;
-    float: left;
-    text-align: center;
-}	
+    <head>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>UCL Flaxman Art Gallery</title>
 
-div.img img {
-    display: inline;
-    margin: 5px;
-    border: 1px solid #ffffff;
-}
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <style>
+        div.img {
+            margin: auto;
+            border: 1px solid #0000ff;
+            height: auto;
+            width: 50%;
+            float: right;
+            text-align: center;
+        }	
 
-div.img a:hover img {
-    border: 1px solid #0000ff;
-}
+        div.img img {
+            display: inline;
+            margin: auto;
+            border: 1px solid #ffffff;
+        }
 
-div.desc {
-  text-align: center;
-  font-weight: normal;
-  width: 120px;
-  margin: 5px;
-}
-</style>
-</head>
-<body>
+        div.img a:hover img {
+            border: 1px solid #0000ff;
+        }
+        .app{
+            padding: 20% 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+        }
+        .thing{
+            float: left;
+            display: inline;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="item">Flaxman Art Gallery</div>
+            <!-- Buttons -->
+            <div class ="menu">
+                <form action="home.html">
+                    <input type="submit" class="Headerbtn" value="&#xe604">
+                </form>
+                <form action="Search.html">
+                    <input type="submit" class="Headerbtn" value="&#xe606">
+                </form>
+                <form action="AppleMap.html">
+                    <input type="submit" class="Headerbtn" value="&#xe609">
+                </form>
+            </div>
+            
+            <div class="app">
+                <div style="thing">
+                    <a target="_blank" href="klematis_big.htm"><img src="klematis_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
+                    <a target="_blank" href="klematis2_big.htm"><img src="klematis2_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
+                    <a target="_blank" href="klematis3_big.htm"><img src="klematis3_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
+                    <a target="_blank" href="klematis5_big.htm"><img src="klematis5_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
+                </div>
+            </div>
+            
+        </div>
 
-<div class="img">
- <a target="_blank" href="klematis_big.htm"><img src="klematis_small.jpg" alt="Klematis" width="110" height="90"></a>
- <div class="desc">Add a description of the image here</div>
-</div>
-<div class="img">
- <a target="_blank" href="klematis2_big.htm"><img src="klematis2_small.jpg" alt="Klematis" width="110" height="90"></a>
- <div class="desc">Add a description of the image here</div>
-</div>
-<div class="img">
- <a target="_blank" href="klematis3_big.htm"><img src="klematis3_small.jpg" alt="Klematis" width="110" height="90"></a>
- <div class="desc">Add a description of the image here</div>
-</div>
-<div class="img">
- <a target="_blank" href="klematis4_big.htm"><img src="klematis4_small.jpg" alt="Klematis" width="110" height="90"></a>
- <div class="desc">Add a description of the image here</div>
-</div>
 
-</body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
 </html>
