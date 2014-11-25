@@ -17,18 +17,21 @@ and open the template in the editor.
         <style>
             
             #searchfor{
-                margin: 5% 5%;
-                width: 80%;
-                height: 100%;
+                margin:3% 3%;
+                width: 90%;
+                height: 120%;
+                border-radius: 3px;
+                border: 1px solid white;
+                box-shadow: 0px 0px 2px 0px;
             }
             
             .searchbar {
-                background-color: white;
+                background-color: thistle;
+                background: linear-gradient(#f1e1fd,thistle);
                 box-shadow: 0px 0px 4px 0px;
-                text-align: center;
+                border-radius: 5px;
                 margin: 20% 10% 10%;
                 width: 80%;
-                height: 40%;
             }
             
             
@@ -52,10 +55,9 @@ and open the template in the editor.
             </div>
             
         <div class="searchbar">
-            <br /><i class="icon-search">Type in Search bar</i>
-            
             <form name="form1" method="get" action="searchresults.php">
                 <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
+<!--                <input id="submit" type="submit" value="Search" />-->
             </form>
 
             

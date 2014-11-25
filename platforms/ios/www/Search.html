@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -41,22 +41,22 @@ and open the template in the editor.
             <!-- Buttons -->
             <div class ="menu">
                 <form action="home.html">
-                    <input type="submit" class="Headerbtn" value="&#xe604">
+                    <input type="submit" class="Headerbtn" value="&#xe604" />
                 </form>
                 <form action="Search.html">
-                    <input type="submit" class="Headerbtn" value="&#xe606">
+                    <input type="submit" class="Headerbtn" value="&#xe606" />
                 </form>
                 <form action="AppleMap.html">
-                    <input type="submit" class="Headerbtn" value="&#xe609">
+                    <input type="submit" class="Headerbtn" value="&#xe609" />
                 </form>
             </div>
             
         <div class="searchbar">
             <br /><i class="icon-search">Type in Search bar</i>
             
-            <form action="get">
-
-                <input id="searchfor" type="text" placeholder="Search">
+            <form name="form1" method="get" action="searchresults.php">
+                <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
+                <input id="submit" type="submit" value="Search" />
             </form>
 
             
