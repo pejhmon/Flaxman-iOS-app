@@ -42,12 +42,12 @@
     
     h4{
         color: black;
-        font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-        font-size:3.5vmin;
+        font-size:4.5vmin;
         height:100%;
         margin:0px;
         padding:0px;
         width:100%;
+        text-transform: none;
     }
 
 body {
@@ -71,7 +71,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform:none;
     width:100%;
 }
 
@@ -204,6 +204,10 @@ input[type="submit"]{
         line-height: 1;
         -webkit-font-smoothing: antialiased;
     }
+    
+    .icon-search:before {
+    content: "\e606";
+}
     
 .blink {
     animation:fade 3000ms infinite;

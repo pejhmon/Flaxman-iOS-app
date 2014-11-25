@@ -15,16 +15,29 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>UCL Flaxman Art Gallery</title>
         <style>
-            .filler{
-                float: left;
-                clear: both;
-                margin-top: 10px;
+            
+            #searchfor{
+                margin: 5% 5%;
+                width: 80%;
+                height: 100%;
             }
+            
+            .searchbar {
+                background-color: white;
+                box-shadow: 0px 0px 4px 0px;
+                text-align: center;
+                margin: 20% 10% 10%;
+                width: 80%;
+                height: 40%;
+            }
+            
+            
+            
         </style>
     </head>
     <body>
         <div class="header">
-            <div class="item">Flaxman Art Gallery</div>
+            <div class="item">FLAXMAN ART GALLERY</div>
             <!-- Buttons -->
             <div class ="menu">
                 <form action="home.html">
@@ -38,14 +51,24 @@ and open the template in the editor.
                 </form>
             </div>
             
-            <div class="app">
-                <input type="search">
-            </div>
+        <div class="searchbar">
+            <br /><i class="icon-search">Type in Search bar</i>
             
+            <form action="get">
+
+                <input id="searchfor" type="text" placeholder="Search">
+            </form>
+
+            
+        </div>            
+            <div class="app">
+            </div>  
         </div>
+
         
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="search.js"></script>
     </body>
 </html>

@@ -39,6 +39,16 @@
         padding:0px;
         text-align:left;
     }
+    
+    h4{
+        color: black;
+        font-size:4.5vmin;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        width:100%;
+        text-transform: none;
+    }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -61,7 +71,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform:none;
     width:100%;
 }
 
@@ -106,54 +116,12 @@ body {
     border: 0px;
 }
 .Headerbtn:hover {
-    background: #4D224F;
+    color: #4D224F;
     text-decoration: none;
 }
 form{
     display: inline;
 }
-/*.menu {
-    color: white;
-}*/
-/*.menu.nav-bar{
-    list-style: none;
-    margin-top: 30px;
-}
-li is list item
-.menu.nav-bar li{
-    display: inline;
-    padding: 0 10px;
-    color:white;
-}
-a is hyperlink
-.menu.nav-bar li a{
-    text-decoration: none;
-    padding-left: 25px;
-    text-transform: uppercase;
-    color:white;
-    text-shadow: 1px 1px 1px #A7A7A7;
-}
-.nav-bar.nav-button-home a{
-    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif")
-        no-repeat 0px -2px transparent;
-}
-.nav-bar.nav-button-services a{
-    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif")
-        no-repeat 0px -2px transparent;
-}
-
-.nav-bar.nav-button-products a{
-    background:url("http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif")
-        no-repeat 0px -2px transparent;
-}*/
-
-/*.subitem{
-    display:inline-block;
-    padding:42px 0px 0px 0px;
-    margin:0px;
-    color:white;
-}*/
-
 /* Portrait layout (default) */
 .app {
 /*    background:url(../img/uclLogo.png) no-repeat center top;  170px x 200px 
@@ -236,6 +204,10 @@ input[type="submit"]{
         line-height: 1;
         -webkit-font-smoothing: antialiased;
     }
+    
+    .icon-search:before {
+    content: "\e606";
+}
     
 .blink {
     animation:fade 3000ms infinite;
