@@ -39,6 +39,16 @@
         padding:0px;
         text-align:left;
     }
+    
+    h4{
+        color: black;
+        font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-size:3.5vmin;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        width:100%;
+    }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
