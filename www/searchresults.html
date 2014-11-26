@@ -10,10 +10,14 @@ and open the template in the editor.
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
-          $("button").click(function(){
-            $("p").hide();
-          });
-            });
+          $("p:contains(is)").css("background-color","yellow");
+          //when search bar is entered, $("search").get(function(){}
+          //entered keyword is divided by " "
+          //search using the keyword through metadata
+          //if matching words, store the category's data URL and image in .css format
+          //go through all the database and reutrn with the datasets.
+});
+
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
