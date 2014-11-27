@@ -21,16 +21,16 @@
 
 Ten plugin umożliwia dostęp do urządzenia kompas. Kompas jest czujnik, który wykrywa kierunek lub pozycji, że urządzenie jest wskazywany, zazwyczaj z górnej części urządzenia. Mierzy on nagłówek w stopniach od 0 do 359.99, gdzie 0 jest północ.
 
-## Instalacja
+## Instalacji
 
     cordova plugin add org.apache.cordova.device-orientation
     
 
 ## Obsługiwane platformy
 
-*   Amazon Fire OS
+*   Amazon ogień OS
 *   Android
-*   BlackBerry 10
+*   Jeżyna 10
 *   Przeglądarka
 *   Firefox OS
 *   iOS
@@ -100,7 +100,7 @@ Identyfikator zwrócony zegarek odwołuje interwał kompas zegarek. Oglądaj ide
 
 Wartości dla bieżącej pozycji są losowo generowane w celu symulacji kompas.
 
-### Dziwactwa iOS
+### iOS dziwactwa
 
 Tylko jeden `watchHeading` może być efekt w tym samym czasie w iOS. Jeśli `watchHeading` używa filtru, wywołanie `getCurrentHeading` lub `watchHeading` używa istniejących wartości filtru określić zmiany pozycji. Obserwując zmiany pozycji z filtrem jest bardziej efektywne niż z odstępach czasu.
 
@@ -108,7 +108,7 @@ Tylko jeden `watchHeading` może być efekt w tym samym czasie w iOS. Jeśli `wa
 
 *   `filter`nie jest obsługiwane.
 
-### Dziwactwa Androida
+### Android dziwactwa
 
 *   Brak wsparcia dla`filter`.
 
@@ -116,7 +116,7 @@ Tylko jeden `watchHeading` może być efekt w tym samym czasie w iOS. Jeśli `wa
 
 *   Brak wsparcia dla`filter`.
 
-### Dziwactwa Tizen
+### Osobliwości Tizen
 
 *   Brak wsparcia dla`filter`.
 
@@ -126,7 +126,7 @@ Tylko jeden `watchHeading` może być efekt w tym samym czasie w iOS. Jeśli `wa
 
 ## navigator.compass.clearWatch
 
-Zatrzymuje obserwowanie kompasu określonego przez parametr watchID.
+Przestać oglądać określany przez parametr ID Zegarek kompas.
 
     navigator.compass.clearWatch(watchID);
     
@@ -162,7 +162,7 @@ A `CompassHeading` obiekt jest zwracany do `compassSuccess` funkcji wywołania z
 
 *   `headingAccuracy`jest zawsze 0, ponieważ nie ma żadnej różnicy między `magneticHeading` i`trueHeading`
 
-### Dziwactwa Androida
+### Android dziwactwa
 
 *   `trueHeading`Właściwość nie jest obsługiwany, ale raporty taką samą wartość jak`magneticHeading`.
 
@@ -174,7 +174,7 @@ A `CompassHeading` obiekt jest zwracany do `compassSuccess` funkcji wywołania z
 
 *   `headingAccuracy`Właściwość jest zawsze 0, ponieważ nie ma żadnej różnicy między `magneticHeading` i`trueHeading`.
 
-### Dziwactwa iOS
+### iOS dziwactwa
 
 *   `trueHeading`Właściwość jest zwracana tylko dla lokalizacji usług włączone za pomocą`navigator.geolocation.watchLocation()`.
 

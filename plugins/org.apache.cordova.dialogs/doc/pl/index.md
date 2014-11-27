@@ -21,7 +21,7 @@
 
 Ten plugin umożliwia dostęp do niektórych rodzimych okna dialogowego elementy interfejsu użytkownika.
 
-## Instalacja
+## Instalacji
 
     cordova plugin add org.apache.cordova.dialogs
     
@@ -64,9 +64,9 @@ Pokazuje niestandardowe wpisu lub okno dialogowe. Większość implementacji Cor
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
+*   Amazon ogień OS
 *   Android
-*   BlackBerry 10
+*   Jeżyna 10
 *   Firefox OS
 *   iOS
 *   Tizen
@@ -123,9 +123,9 @@ Wywołania zwrotnego przyjmuje argument `buttonIndex` *(numer)*, który jest ind
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
+*   Amazon ogień OS
 *   Android
-*   BlackBerry 10
+*   Jeżyna 10
 *   Firefox OS
 *   iOS
 *   Tizen
@@ -187,13 +187,13 @@ Wyświetla okno dialogowe macierzystego, który bardziej niż przeglądarki `pro
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
+*   Amazon ogień OS
 *   Android
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 i 8
 
-### Dziwactwa Androida
+### Android dziwactwa
 
 *   Android obsługuje maksymalnie trzy przyciski i więcej niż to ignoruje.
 
@@ -220,9 +220,9 @@ Urządzenie odtwarza sygnał ciągły dźwięk.
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
+*   Amazon ogień OS
 *   Android
-*   BlackBerry 10
+*   Jeżyna 10
 *   iOS
 *   Tizen
 *   Windows Phone 7 i 8
@@ -232,7 +232,7 @@ Urządzenie odtwarza sygnał ciągły dźwięk.
 
 *   Amazon ogień OS gra domyślny **Dźwięk powiadomienia** określone w panelu **ekranu/ustawienia i dźwięk** .
 
-### Dziwactwa Androida
+### Android dziwactwa
 
 *   Android gra domyślnie **dzwonek powiadomienia** określone w panelu **ustawień/dźwięk i wyświetlacz** .
 
@@ -240,7 +240,7 @@ Urządzenie odtwarza sygnał ciągły dźwięk.
 
 *   Opiera się na pliku rodzajowego sygnał z rozkładu Cordova.
 
-### Dziwactwa Tizen
+### Osobliwości Tizen
 
 *   Tizen implementuje dźwięków przez odtwarzania pliku audio za pośrednictwem mediów API.
 

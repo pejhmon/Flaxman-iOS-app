@@ -65,7 +65,7 @@ o
 
 #### iOS rarezas
 
-*   **time**: ignora el tiempo especificado y vibra por un tiempo preestablecido.
+*   **tiempo**: ignora el tiempo especificado y vibra durante un tiempo preestablecido.
     
     Navigator.Vibrate(3000); 3000 se omite
 
@@ -130,10 +130,10 @@ Vibra el dispositivo para una cantidad dada de tiempo.
 
 ### iOS rarezas
 
-*   **time**: ignora el tiempo especificado y vibra por un tiempo preestablecido.
+*   **tiempo**: ignora el tiempo especificado y vibra durante un tiempo preestablecido.
     
         navigator.notification.vibrate();
-        navigator.notification.vibrate(2500);   // 2500 es ignorado
+        navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
 ## *Notification.vibrateWithPattern (obsoleto)

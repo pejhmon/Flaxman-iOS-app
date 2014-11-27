@@ -25,10 +25,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.media.Ringtone;
@@ -160,7 +157,7 @@ public class Notification extends CordovaPlugin {
         Runnable runnable = new Runnable() {
             public void run() {
 
-                AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
                 dlg.setMessage(message);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
@@ -179,7 +176,10 @@ public class Notification extends CordovaPlugin {
                     }
                 });
 
-                changeTextDirection(dlg);
+                dlg.create();
+                AlertDialog dialog =  dlg.show();
+                TextView messageview = (TextView)dialog.findViewById(android.R.id.message);
+                messageview.setTextDirection(android.view.View.TEXT_DIRECTION_LOCALE);
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
@@ -200,7 +200,7 @@ public class Notification extends CordovaPlugin {
 
         Runnable runnable = new Runnable() {
             public void run() {
-                AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
                 dlg.setMessage(message);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
@@ -251,7 +251,10 @@ public class Notification extends CordovaPlugin {
                     }
                 });
 
-                changeTextDirection(dlg);
+                dlg.create();
+                AlertDialog dialog =  dlg.show();
+                TextView messageview = (TextView)dialog.findViewById(android.R.id.message);
+                messageview.setTextDirection(android.view.View.TEXT_DIRECTION_LOCALE);
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
@@ -277,7 +280,7 @@ public class Notification extends CordovaPlugin {
             public void run() {
                 final EditText promptInput =  new EditText(cordova.getActivity());
                 promptInput.setHint(defaultText);
-                AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
                 dlg.setMessage(message);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
@@ -347,7 +350,10 @@ public class Notification extends CordovaPlugin {
                     }
                 });
 
-                changeTextDirection(dlg);
+                dlg.create();
+                AlertDialog dialog =  dlg.show();
+                TextView messageview = (TextView)dialog.findViewById(android.R.id.message);
+                messageview.setTextDirection(android.view.View.TEXT_DIRECTION_LOCALE);
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
@@ -364,22 +370,15 @@ public class Notification extends CordovaPlugin {
             this.spinnerDialog.dismiss();
             this.spinnerDialog = null;
         }
-        final Notification notification = this;
         final CordovaInterface cordova = this.cordova;
         Runnable runnable = new Runnable() {
             public void run() {
-                notification.spinnerDialog = createProgressDialog(cordova); // new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-                notification.spinnerDialog.setTitle(title);
-                notification.spinnerDialog.setMessage(message);
-                notification.spinnerDialog.setCancelable(true);
-                notification.spinnerDialog.setIndeterminate(true);
-                notification.spinnerDialog.setOnCancelListener(
+                Notification.this.spinnerDialog = ProgressDialog.show(cordova.getActivity(), title, message, true, true,
                         new DialogInterface.OnCancelListener() {
                             public void onCancel(DialogInterface dialog) {
-                                notification.spinnerDialog = null;
+                                Notification.this.spinnerDialog = null;
                             }
                         });
-                notification.spinnerDialog.show();
             }
         };
         this.cordova.getActivity().runOnUiThread(runnable);
@@ -410,7 +409,7 @@ public class Notification extends CordovaPlugin {
         final CordovaInterface cordova = this.cordova;
         Runnable runnable = new Runnable() {
             public void run() {
-                notification.progressDialog = createProgressDialog(cordova); // new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                notification.progressDialog = new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
                 notification.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                 notification.progressDialog.setTitle(title);
                 notification.progressDialog.setMessage(message);
@@ -447,37 +446,6 @@ public class Notification extends CordovaPlugin {
         if (this.progressDialog != null) {
             this.progressDialog.dismiss();
             this.progressDialog = null;
-        }
-    }
-    
-    @SuppressLint("NewApi")
-    private AlertDialog.Builder createDialog(CordovaInterface cordova) {
-        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            return new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-        } else {
-            return new AlertDialog.Builder(cordova.getActivity());
-        }
-    }
-
-    @SuppressLint("InlinedApi")
-    private ProgressDialog createProgressDialog(CordovaInterface cordova) {
-        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            return new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-        } else {
-            return new ProgressDialog(cordova.getActivity());
-        }
-    }
-    
-    @SuppressLint("NewApi")
-    private void changeTextDirection(Builder dlg){
-        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        dlg.create();
-        AlertDialog dialog =  dlg.show();
-        if (currentapiVersion >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            TextView messageview = (TextView)dialog.findViewById(android.R.id.message);
-            messageview.setTextDirection(android.view.View.TEXT_DIRECTION_LOCALE);
         }
     }
 }

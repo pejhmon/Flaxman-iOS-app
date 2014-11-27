@@ -64,7 +64,7 @@
 
 ### Поддерживаемые платформы
 
-*   Amazon Fire OS
+*   Amazon Fire ОС
 *   Android
 *   BlackBerry 10
 *   Firefox OS
@@ -73,7 +73,7 @@
 *   Windows Phone 7 и 8
 *   Windows 8
 
-### Особенности Windows Phone 7 и 8
+### Windows Phone 7 и 8 причуды
 
 *   Существует предупреждение не встроенный браузер, но можно привязать один следующим позвонить `alert()` в глобальной области действия:
     
@@ -123,7 +123,7 @@
 
 ### Поддерживаемые платформы
 
-*   Amazon Fire OS
+*   Amazon Fire ОС
 *   Android
 *   BlackBerry 10
 *   Firefox OS
@@ -132,7 +132,7 @@
 *   Windows Phone 7 и 8
 *   Windows 8
 
-### Особенности Windows Phone 7 и 8
+### Windows Phone 7 и 8 причуды
 
 *   Нет встроенного браузера функция для `window.confirm` , но его можно привязать путем присвоения:
     
@@ -187,13 +187,13 @@
 
 ### Поддерживаемые платформы
 
-*   Amazon Fire OS
+*   Amazon Fire ОС
 *   Android
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 и 8
 
-### Особенности Android
+### Android причуды
 
 *   Android поддерживает максимум из трех кнопок и игнорирует больше, чем это.
 
@@ -220,7 +220,7 @@
 
 ### Поддерживаемые платформы
 
-*   Amazon Fire OS
+*   Amazon Fire ОС
 *   Android
 *   BlackBerry 10
 *   iOS
@@ -228,19 +228,19 @@
 *   Windows Phone 7 и 8
 *   Windows 8
 
-### Особенности Amazon Fire OS
+### Amazon Fire OS причуды
 
 *   Amazon Fire OS играет по умолчанию **Звук уведомления** , указанного на панели **параметров/дисплей и звук** .
 
-### Особенности Android
+### Android причуды
 
 *   Android играет по умолчанию **уведомления рингтон** указанных в панели **настройки/звук и дисплей** .
 
-### Особенности Windows Phone 7 и 8
+### Windows Phone 7 и 8 причуды
 
 *   Опирается на общий звуковой файл из дистрибутива Кордова.
 
-### Особенности Tizen
+### Причуды Tizen
 
 *   Tizen реализует гудков, воспроизведении аудиофайла через СМИ API.
 

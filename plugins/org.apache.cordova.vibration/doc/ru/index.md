@@ -52,7 +52,7 @@ navigator.notification.cancelVibration - Android
     navigator.vibrate([time])
     
 
--**time**: Сколько миллисекунд будет вибрировать устройство. *(Число)*
+-**время**: миллисекунд вибрировать устройство. *(Число)*
 
 #### Пример
 
@@ -63,9 +63,9 @@ navigator.notification.cancelVibration - Android
     navigator.vibrate([3000]);
     
 
-#### Особенности iOS
+#### iOS причуды
 
-*   **time**: игнорирует указанное время и вибрирует предопределенный отрезок времени.
+*   **время**: игнорирует указанное время и вибрирует для предварительно установленного времени.
     
     Navigator.Vibrate(3000); 3000 игнорируется
 
@@ -120,7 +120,7 @@ navigator.notification.cancelVibration - Android
     navigator.notification.vibrate(time)
     
 
-*   **time**: Сколько миллисекунд будет вибрировать устройство. *(Число)*
+*   **время**: миллисекунд вибрировать устройство. *(Число)*
 
 ### Пример
 
@@ -128,9 +128,9 @@ navigator.notification.cancelVibration - Android
     navigator.notification.vibrate(2500);
     
 
-### Особенности iOS
+### iOS причуды
 
-*   **time**: игнорирует указанное время и вибрирует предопределенный отрезок времени.
+*   **время**: игнорирует указанное время и вибрирует для предварительно установленного времени.
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored
