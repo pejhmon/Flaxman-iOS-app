@@ -29,7 +29,7 @@ var temp=0;
 // percentage match found
 // keywords as parsed from the input
 // # of titles present in the database
-title[0]=6
+title[0]=10
 //no of keywords after parsing
 keywords[0]=0
 //no of  matches found.
