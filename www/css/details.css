@@ -21,7 +21,6 @@
 }
 
     h1 {
-        color:white;
         font-size:22px;
         font-weight:normal;
         margin:0px;
@@ -31,7 +30,6 @@
     }
     
     h2{
-        color:black;
         font-size:14px;
         font-weight:normal;
         margin:0px;
@@ -41,7 +39,6 @@
     }
     
     h4{
-        color: black;
         font-size:4.5vmin;
         height:100%;
         margin:0px;
@@ -51,7 +48,6 @@
     }
 
     h5{
-        color:black;
         font-size:14px;
         font-weight:normal;
         margin:0px;
@@ -61,17 +57,15 @@
     }
 
      h6{
-        color:black;
         font-size:13px;
         font-weight:bold;
         margin:0px;
         overflow:visible;
-        padding:5px;
+        padding:0px;
         text-align:right;
     }
 
     h7{
-        color:black;
         font-size:20px;
         font-weight:bold;
         margin:0px;
@@ -81,16 +75,15 @@
     }
 
     dscpp{
-        color:black;
         font-size:15px;
-        font-weight:auto;
+        font-weight: normal;
         margin:20px;
+        margin:0%;
         overflow:visible;
-        padding:0px;
         text-align:left;
     }
     
-    
+ /*   
 #grad {
 background-image:linear-gradient(top, #000033 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #000033 0%, #E4E4E4 51%);
@@ -103,11 +96,11 @@ background-image:linear-gradient(top, #000033 0%, #E4E4E4 51%);
         color-stop(0.51, #E4E4E4)
         );
 }
-
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+*/
+body {/*
+    -webkit-touch-callout: none;                // prevent callout to copy image, etc when tap to hold 
+    -webkit-text-size-adjust: none;             // prevent webkit from resizing text to fit 
+    -webkit-user-select: none;                  // prevent copy paste, to allow, change 'none' to 'text' 
     background-color:#E4E4E4;
     background-image:linear-gradient(top, #000033 0%, #3c1e78 51%);
     background-image:-webkit-linear-gradient(top, #000033 0%, #3c1e78 51%);
@@ -119,9 +112,10 @@ body {
         color-stop(0, #ffefff),
         color-stop(0.81, #bbabbb)
         );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    background-attachment:fixed; 
+*/    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:4.5vmin;
+    color: #ffffff;
     height:100%;
     margin:0px;
     padding:0px;
@@ -197,11 +191,13 @@ form{
     background-size: 350px;
     left:20%;
     top:22%;*/
-    height:200px;                   /* text area height */
+    height:auto;                   /* text area height */
     //width:435px;                   /* text area width */
     text-align:left;
     padding:200px 0px 0px 200px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-150px 0px 0px -190px;  /* offset vertical: half of image height and text area height */
+    margin:-150px 0px 0px -190px;
+    padding: 5% 5% 5% 0%;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:0% 0% 0% 0%;  /* offset vertical: half of image height and text area height */
     /* offset horizontal: half of text area width */
 }
 
@@ -211,11 +207,14 @@ form{
     background-size: 350px;
     left:20%;
     top:22%;*/
-    height:200px;                   /* text area height */
+    height:auto;                   /* text area height */
     //width:435px;                   /* text area width */
     text-align:left;
     padding:200px 0px 0px 200px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-295px 0px 0px -195px;  /* offset vertical: half of image height and text area height */
+    padding: 0%;
+    margin: 0%;
+    
     /* offset horizontal: half of text area width */
 }
 
@@ -230,7 +229,9 @@ form{
     text-align:left;
     padding:340px 0px 0px 240px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-295px 0px 0px -195px;  /* offset vertical: half of image height and text area height */
-    /* offset horizontal: half of text area width */
+    
+    padding:0%;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin: 0%;/* offset horizontal: half of text area width */
 }
 
 /* Landscape layout (with min-width) */

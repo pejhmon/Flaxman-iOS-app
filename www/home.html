@@ -32,28 +32,55 @@ and open the template in the editor.
             margin: auto;
             border: 1px solid #ffffff;
         }
-        */
-
         div.img a:hover img {
             border: 1px solid #ffffff;
         }
+        */
         .app{
             padding: 0% 0% 0% 0%;
             margin: 0% 0% 0% 0%;
+            width: 100%;
+            height: 100%;
             display: inline;
         }
+        div.image-centre {
+            width: 32.5%;
+            height: 0px;/*
+            background-position: center center;      class="image-centre"
+            background-repeat: no-repeat;*/
+            overflow: hidden;
+            text-align: center;
+            padding: 0% 0% 32.5% 0.8%;
+            float: left;
+        }
+        div.image-centre a img{
+            height: 100%;
+            min-width: 100%;/*
+            opacity: 0;*/
+            position: relative;
+            transform: translateX(-50%);
+            left: 100%;
+            margin-left: -200%;
+        }/*
+        .image-centre{
+            object-fit: none;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+        }*/
         .thing{
             position: relative;
             width: 32.5%;
-            height: 0%;
+            height: 0px;
             overflow: hidden;
+            padding: 0% 0% 32.5% 0.8%;
             float: left;
-        }
+        }/*
         .thing img{
             display: inline;
             width: 100%;
             padding: -50% -10% -10% -10%;
-        }
+        }*/
         </style>
     </head>
     <body>
@@ -74,17 +101,25 @@ and open the template in the editor.
         </div>
         <div id="grad" style="padding: 5%;"></div>
         <div class="app">
-            <div class="thing">
-                <a target="_blank" href="klematis_big.htm"><img src="img/artwork/26 Brahmin.jpg" alt="Klematis" ></a>
+            <div class="image-centre">
+                <a href="Details.html">
+                    <img src="img/artwork/26 Brahmin.jpg" alt="Klematis" >
+                </a>
             </div>
-            <div class="thing">
-                <a target="_blank" href="klematis2_big.htm"><img src="img/artwork/5 The Lords Prayer.jpg" alt="Klematis" ></a>
+            <div class="image-centre">
+                <a target="_blank" href="klematis2_big.htm">
+                    <img src="img/artwork/5 The Lords Prayer.jpg" alt="Klematis" >
+                </a>
             </div>
-            <div class="thing">
-                <a target="_blank" href="klematis3_big.htm"><img src="img/artwork/IMG_3783.jpg" alt="Klematis" ></a>
+            <div class="image-centre">
+                <a target="_blank" href="klematis3_big.htm">
+                    <img src="img/artwork/IMG_3783.jpg" alt="Klematis" >
+                </a>
             </div>
-            <div class="thing">
-                <a target="_blank" href="klematis5_big.htm"><img src="img/artwork/marmor-medium.jpg" alt="Blah" ></a>
+            <div class="image-centre">
+                <a target="_blank" href="klematis5_big.htm">
+                    <img src="img/artwork/marmor-medium.jpg" alt="Blah" >
+                </a>
             </div>
         </div>
 
