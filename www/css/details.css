@@ -63,7 +63,7 @@
      h6{
         color:black;
         font-size:13px;
-        font-weight:normal;
+        font-weight:bold;
         margin:0px;
         overflow:visible;
         padding:5px;
@@ -75,6 +75,16 @@
         font-size:20px;
         font-weight:bold;
         margin:0px;
+        overflow:visible;
+        padding:0px;
+        text-align:left;
+    }
+
+    dscpp{
+        color:black;
+        font-size:15px;
+        font-weight:auto;
+        margin:20px;
         overflow:visible;
         padding:0px;
         text-align:left;
@@ -205,7 +215,7 @@ form{
     //width:435px;                   /* text area width */
     text-align:left;
     padding:200px 0px 0px 200px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-150px 0px 0px -190px;  /* offset vertical: half of image height and text area height */
+    margin:-295px 0px 0px -195px;  /* offset vertical: half of image height and text area height */
     /* offset horizontal: half of text area width */
 }
 
