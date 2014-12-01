@@ -460,20 +460,20 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.vibration": "0.3.12-dev",
-    "org.apache.cordova.geolocation": "0.3.11-dev",
+    "org.apache.cordova.vibration": "0.3.11",
+    "org.apache.cordova.geolocation": "0.3.10",
     "org.apache.cordova.file": "1.3.2-dev",
     "org.apache.cordova.globalization": "0.3.3-dev",
     "org.apache.cordova.media": "0.2.15-dev",
     "org.apache.cordova.media-capture": "0.3.5-dev",
     "org.apache.cordova.file-transfer": "0.4.8-dev",
     "org.apache.cordova.contacts": "0.2.15-dev",
-    "org.apache.cordova.device-orientation": "0.3.10-dev",
-    "org.apache.cordova.device": "0.2.13-dev",
+    "org.apache.cordova.device-orientation": "0.3.9",
+    "org.apache.cordova.device": "0.2.12",
     "org.apache.cordova.splashscreen": "0.3.5-dev",
     "org.apache.cordova.camera": "0.3.4-dev",
-    "org.apache.cordova.dialogs": "0.2.11-dev",
-    "org.apache.cordova.device-motion": "0.2.11-dev",
+    "org.apache.cordova.dialogs": "0.2.10",
+    "org.apache.cordova.device-motion": "0.2.10",
     "org.apache.cordova.network-information": "0.2.14-dev",
     "org.apache.cordova.battery-status": "0.2.12-dev"
 }
