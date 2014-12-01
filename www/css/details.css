@@ -50,15 +50,36 @@
         text-transform: none;
     }
 
-    h5 {
+    h5{
         color:black;
-        font-size:15px;
+        font-size:14px;
         font-weight:normal;
         margin:0px;
         overflow:visible;
         padding:0px;
         text-align:left;
     }
+
+     h6{
+        color:black;
+        font-size:13px;
+        font-weight:normal;
+        margin:0px;
+        overflow:visible;
+        padding:5px;
+        text-align:right;
+    }
+
+    h7{
+        color:black;
+        font-size:20px;
+        font-weight:bold;
+        margin:0px;
+        overflow:visible;
+        padding:0px;
+        text-align:left;
+    }
+    
     
 #grad {
 background-image:linear-gradient(top, #000033 0%, #E4E4E4 51%);
@@ -157,6 +178,34 @@ form{
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+.dtlheader {
+/*    background:url(../img/uclLogo.png) no-repeat center top;  170px x 200px 
+    position:fixed; position in the center of the screen 
+    background-size: 350px;
+    left:20%;
+    top:22%;*/
+    height:200px;                   /* text area height */
+    //width:435px;                   /* text area width */
+    text-align:left;
+    padding:200px 0px 0px 200px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-150px 0px 0px -190px;  /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+.dtldscp {
+/*    background:url(../img/uclLogo.png) no-repeat center top;  170px x 200px 
+    position:fixed; position in the center of the screen 
+    background-size: 350px;
+    left:20%;
+    top:22%;*/
+    height:200px;                   /* text area height */
+    //width:435px;                   /* text area width */
+    text-align:left;
+    padding:200px 0px 0px 200px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-150px 0px 0px -190px;  /* offset vertical: half of image height and text area height */
     /* offset horizontal: half of text area width */
 }
 
