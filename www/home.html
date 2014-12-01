@@ -17,6 +17,7 @@ and open the template in the editor.
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <style>
+            /*
         div.img {
             margin: auto;
             border: 1px solid #0000ff;
@@ -31,23 +32,33 @@ and open the template in the editor.
             margin: auto;
             border: 1px solid #ffffff;
         }
+        */
 
         div.img a:hover img {
-            border: 1px solid #0000ff;
+            border: 1px solid #ffffff;
         }
         .app{
-            padding: 20% 0px 0px 0px;
-            margin: 0px 0px 0px 0px;
+            padding: 0% 0% 0% 0%;
+            margin: 0% 0% 0% 0%;
+            display: inline;
         }
         .thing{
+            position: relative;
+            width: 32.5%;
+            height: 0%;
+            overflow: hidden;
             float: left;
+        }
+        .thing img{
             display: inline;
+            width: 100%;
+            padding: -50% -10% -10% -10%;
         }
         </style>
     </head>
     <body>
         <div class="header">
-            <div class="item">Flaxman Art Gallery</div>
+            <div class="item">UCL Art Gallery</div>
             <!-- Buttons -->
             <div class ="menu">
                 <form action="home.html">
@@ -60,18 +71,22 @@ and open the template in the editor.
                     <input type="submit" class="Headerbtn" value="&#xe609">
                 </form>
             </div>
-            
-            <div class="app">
-                <div style="thing">
-                    <a target="_blank" href="klematis_big.htm"><img src="klematis_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
-                    <a target="_blank" href="klematis2_big.htm"><img src="klematis2_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
-                    <a target="_blank" href="klematis3_big.htm"><img src="klematis3_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
-                    <a target="_blank" href="klematis5_big.htm"><img src="klematis5_small.jpg" alt="Klematis" style="width:49%; height:auto;"></a>
-                </div>
-            </div>
-            
         </div>
-
+        <div id="grad" style="padding: 5%;"></div>
+        <div class="app">
+            <div class="thing">
+                <a target="_blank" href="klematis_big.htm"><img src="img/artwork/26 Brahmin.jpg" alt="Klematis" ></a>
+            </div>
+            <div class="thing">
+                <a target="_blank" href="klematis2_big.htm"><img src="img/artwork/5 The Lords Prayer.jpg" alt="Klematis" ></a>
+            </div>
+            <div class="thing">
+                <a target="_blank" href="klematis3_big.htm"><img src="img/artwork/IMG_3783.jpg" alt="Klematis" ></a>
+            </div>
+            <div class="thing">
+                <a target="_blank" href="klematis5_big.htm"><img src="img/artwork/marmor-medium.jpg" alt="Blah" ></a>
+            </div>
+        </div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
