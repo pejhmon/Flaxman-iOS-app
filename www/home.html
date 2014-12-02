@@ -79,6 +79,12 @@ and open the template in the editor.
             padding: -50% -10% -10% -10%;
         }*/
         </style>
+        <script type='text/javascript'>
+  var template = document.getElementById('templateTop').innerHTML;
+  var output = Mustache.render(template, view);
+  document.getElementById('person').innerHTML = output;
+</script>
+
     </head>
     <body>
         <div class="header">
