@@ -1,0 +1,6 @@
+{
+    "name"          : "node-art",
+    "version"       : "0.0.0",
+    "description"   : "trying to make it work",
+    "main"          : "server.js"
+}
