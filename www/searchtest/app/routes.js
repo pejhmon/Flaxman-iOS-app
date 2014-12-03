@@ -4,22 +4,23 @@
  * and open the template in the editor.
  */
 
-// routes ======================================================================
+// RESTfulroutes ======================================================================
 
-	// api ---------------------------------------------------------------------
-	// get all todos
-	app.get('/api/artworks', function(req, res) {
+// api ---------------------------------------------------------------------
 
-		// use mongoose to get all todos in the database
-		Artwork.find(function(err, artworks) {
+// get all artworks
+app.get('/api/artworks', function (req, res) {
 
-			// if there is an error retrieving, send the error. nothing after res.send(err) will execute
-			if (err)
-				res.send(err)
+    // use mongoose to get all todos in the database
+    Artwork.find(function (err, artworks) {
 
-			res.json(artworks); // return all todos in JSON format
-		});
-	});
+        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+        if (err)
+            res.send(err)
+
+        res.json(artworks); // return all todos in JSON format
+    });
+});
 //
 //	// create todo and send back all todos after creation
 //	app.post('/api/todos', function(req, res) {
@@ -42,7 +43,7 @@
 //
 //	});
 
-	// delete a todo
+// delete a todo
 //	app.delete('/api/todos/:todo_id', function(req, res) {
 //		Todo.remove({
 //			_id : req.params.todo_id
