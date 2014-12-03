@@ -1,36 +1,41 @@
 //========================== set up ===============================================
 
-var express           = require('express'),
-    app               = express(),
-    bodyParser        = require('body-parser'),
-    mongoose          = require('mongoose'),
-    meetupsController = require('./server/controllers/meetups-controller');
+var express = require('express');
+var app = express();                                                        //create app with express
+var bodyParser = require('body-parser');                                    //pull info from HTML post
+var mongoose = require('mongoose');                                         //mongoose for mongodb
+//var meetupsController = require('./server/controllers/meetups-controller'); //!!!!
+var port = process.env.PORT || 3000;                                        //setport
+var database = require('./config/database');                                // load config
+var morgan = require('morgan');                                             // log requests to the console (express)
+var methodOverride = require('method-override');                            // simulate DELETE and PUT (express4)
 
-var port = process.env.PORT || 3000;
+// configuration ===============================================================
 
-//========================= config ==========================
+mongoose.connect(database.url);     // connect to mongoDB database on modulus.io !- mongolabs
 
-//mongoose.connect('mongodb://localhost:27017/mean-demo');
-mongoose.connect('mongodb://emettely:19902apple@ds055680.mongolab.com:55680/artdb');
-app.use(bodyParser());
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '../searchresults.html');
-});
 app.use('/js', express.static(__dirname + '/searchtest'));
+app.use(bodyParser());
+app.use(morgan('dev'));                                                     // log every request to the console
+app.use(bodyParser.urlencoded({'extended': 'true'}));                       // parse application/x-www-form-urlencoded
+app.use(bodyParser.json());                                                 // parse application/json
+app.use(bodyParser.json({type: 'application/vnd.api+json'}));               // parse application/vnd.api+json as json
+app.use(methodOverride());
 
-//define model==============================================================
 
-var Todo = mongoose.model('Todo', {
-   text : String,
-   done : Boolean
-    
+//REST API===================
+//app.get('/api/artwork', meetupsController.list);
+//app.post('/api/artworks', meetupsController.create);
+
+// load the single view file (angular will handle the page changes on the front-end)
+app.get('*', function (req, res) {
+    res.sendfile('../searchresults.html');
 });
 
-// routes ===========================================================================
-    //REST API===================
-app.get('/api/meetups', meetupsController.list);
-app.post('/api/meetups', meetupsController.create);
 
-app.listen(3000, function() {
-  console.log('I\'m Listening...');
-});
+// listen (start app with node server.js)=============================================
+app.listen(port);
+console.log('I\'m Listening...' + port);
+
+// load the routes
+require('./app/routes')(app);
