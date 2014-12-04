@@ -15,21 +15,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
 
-
-
-        <!--found some thing!!-->
-        <!--        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-                <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-                <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
-
-
-
         <title>UCL Flaxman Art Gallery</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-
-
-        <!--<script src="/searchtest/app.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <style>
 
@@ -55,78 +44,19 @@ and open the template in the editor.
             #demo{
                 color: white;
             }
-            //for the shifting-----------------------------
-            .ui-page {
-                background: transparent;
-                padding-top: 30%;
-                //for the search bar-----------------------------
-            }
-            #tfheader{
-                background-color:#c3dfef;
-            }
-            #tfnewsearch{
-                float:right;
-                padding:20px;
-            }
-            .tftextinput2{
-                margin: 0;
-                padding: 5px 15px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size:14px;
-                color:#666;
-                border:1px solid #0076a3; border-right:0px;
-                border-top-left-radius: 5px 5px;
-                border-bottom-left-radius: 5px 5px;
-            }
-            .tfbutton2 {
-                margin: 0;
-                padding: 5px 7px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size:14px;
-                font-weight:bold;
-                outline: none;
-                cursor: pointer;
-                text-align: center;
-                text-decoration: none;
-                color: #ffffff;
-                border: solid 1px #0076a3; border-right:0px;
-                background: #0095cd;
-                background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-                background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-                border-top-right-radius: 5px 5px;
-                border-bottom-right-radius: 5px 5px;
-            }
-            .tfbutton2:hover {
-                text-decoration: none;
-                background: #007ead;
-                background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-                background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-            }
-            /* Fixes submit button height problem in Firefox */
-            .tfbutton2::-moz-focus-inner {
-                border: 0;
-            }
-            .tfclear{
-                clear:both;
-            }
             
-                    body{
-            text-align: center;
-            font-family: arial;
-        }
-
-        .button{
-            margin:20px;
-            font-size:16px;
-            font-weight: bold;
-            padding:5px 10px;
-        }
+            .button{
+                margin:20px;
+                font-size:16px;
+                font-weight: bold;
+                padding:5px 10px;
+            }
 
 
 
         </style>
 
-    
+
     </head>
 
 
@@ -134,7 +64,7 @@ and open the template in the editor.
     <body> <!-- ng-app="searchKeyword" ng-controller="MainCtrl"-->
         <div class="header">
             <div class="item">Flaxman Art Gallery</div>
-            Buttons 
+
             <div class ="menu">
                 <form action="home.html">
                     <input type="submit" class="Headerbtn" value="&#xe604" />
@@ -166,91 +96,27 @@ and open the template in the editor.
 
             <!-- --------------------------------inserted stuff------------------------------ -->
 
-            <a href="data.json" target="_blank">Open JSON file</a><br />
-            <input type="button" value="Get and parse JSON" class="button" />
+            <input id="json" type="button" value="Get and parse JSON" class="button" />
             <br />
             <span id="results"></span>
 
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            
+            <script>
+                $(function () {
+                    $('#json').click(function () {
 
-              <script>
+                        $.getJSON('data.json',
+                                function (json) {
+                                    $('#results').append('Plugin name: ' + json.name + '<br />Author: ' + json.author);
+                                    $('#description').append(json.description);
+                                    $('#title').append(json.title);
+                                    $('#image').append(json.image);
 
-$.getJSON('data.json',
-function(json){
-    $('#results').append('Plugin name: ' + json.name + '<br />Author: ' + json.author);
-    $('#description').append(json.description);
-    $('#title').append(json.title);
-    $('#image').append(json.image);
+                                });
+                    });
+                });
 
-            });
-
-    </script>
-
-
-
-            <!-- HTML for SEARCH BAR -->
-<!--            <div id="tfheader">
-                <form id="tfnewsearch" method="get" action="http://www.google.com">
-                    <input type="text" id="tfq2b" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
-                </form>
-                <div class="tfclear"></div>
-            </div>-->
-
-
-
-            <!--            ------JQUERY STARTS HERE------------------
-            <div data-role="page" id="pageone">
-                <div data-role="main" class="ui-content" data->
-                    <h2>Search</h2>
-                    <div class="searchbar">
-                    <form class="ui-filterable">
-                        <input id="searchfor" data-type="search" placeholder="Keywords...">
-                    </form>
-                    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
-                        <li><a href="#">Adele</a></li>
-                        <li><a href="#">Agnes</a></li>
-                        <li><a href="#">Albert</a></li>
-                        <li><a href="#">Billy</a></li>
-                        <li><a href="#">Bob</a></li>
-                        <li><a href="#">Calvin</a></li>
-                        <li><a href="#">Cameron</a></li>
-                        <li><a href="#">Chloe</a></li>
-                        <li><a href="#">Christina</a></li>
-                        <li><a href="#">Diana</a></li>
-                        <li><a href="#">Gabriel</a></li>
-                        <li><a href="#">Glen</a></li>
-                        <li><a href="#">Ralph</a></li>
-                        <li><a href="#">Valarie</a></li>
-                    </ul>
-                    </div>
-                </div>
-            </div> -->
-
-
-
-
-            <!--testing script-->
-            <!--        <div class="app">
-                        <p id="demo"></p>
-                    </div>-->
-
-            <!--test of meanstack-->
-
-            <!--        <div ng-repeat="post in posts">{{post}}
-                    </div>-->
-
-            <!--        <script>
-                        document.getElementById("demo").innerHTML = "abrakadabra DOM";
-                    </script>-->
-
-
-
-            <!--        <div class="searchbar">
-                        <form name="form1" method="get" action="searchresults.php">
-                            <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
-                            <input id="submit" type="submit" value="Search" />
-                        </form>            
-                    </div>            -->
+            </script>
 
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
