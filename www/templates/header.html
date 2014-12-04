@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
 -->
-
 <html>
     <head>
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -30,28 +16,23 @@
         <title>UCL Flaxman Art Gallery</title>
     </head>
     <body>
+        
+            
         <div class="header">
-            <div class="item">Flaxman Art Gallery</div>
-            <!-- Buttons -->
-            <div class ="menu">
-                <form action="home.html">
-                    <input type="submit" class="Headerbtn" value="&#xe604">
-                </form>
-                <form action="Search.html">
-                    <input type="submit" class="Headerbtn" value="&#xe606">
-                </form>
-                <form action="AppleMap.html">
-                    <input type="submit" class="Headerbtn" value="&#xe609">
-                </form>
-            </div>
+        <script id="entry-template" type="text/x-handlebars-template">
+            {{{title}}}
+            <p>lol</p>
+        </script>
+        </div>
+        <div>
             <div style=""><br/><br/>
                 <p>List of links (temporary)</p>
                 <a href="AppleMap.html" class="button">Apple Map</a><br/>
                 <a href="home.html" class="button">Home</a><br/>
                 <a href="Search.html" class="button">Search</a><br/>
                 <a href="Details.html" class="button">Details</a><br/>
-                <a href="UCLmap.html" class="button">UCL map</a><br/>
-                <a href="templates/header.html" class="button">TEMPLATE TEST</a><br/>
+                <a href="UCLmap.html?type=" class="button">UCL map</a><br/>
+                <a href="home.php" class="button">TEMPLATE TEST</a><br/>
             </div>
             <div class="app">
                 <div id="deviceready" class="blink">
@@ -66,5 +47,30 @@
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/handlebars-v2.0.0.js"></script>
+        <script>
+            var source   = $("#entry-template").html();
+            var template = Handlebars.compile(source);
+            var data = {
+                title:"\
+                    <div class='item'>\n\
+                        Flaxman Art Gallery\n\
+                    </div>\n\
+                    <!-- Buttons -->\n\
+                    <div class ='menu'>\n\
+                        <form action='home.html'><input type='submit' class='Headerbtn' value='&#xe604'>\n\
+                        </form>\n\
+                        <form action='Search.html'>\n\
+                        <input type='submit' class='Headerbtn' value='&#xe606'>\n\
+                        </form>\n\
+                        <form action='AppleMap.html'>\n\
+                        <input type='submit' class='Headerbtn' value='&#xe609'>\n\
+                        </form>\n\
+                    </div>"
+            };
+            
+            $('header').append(template(data));
+        </script>
+        
     </body>
 </html>
