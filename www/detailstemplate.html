@@ -36,20 +36,31 @@ and open the template in the editor.
         <div style='padding-top: -20%;'>
             <div class="dtlheader">
                 <h7>
-                    {{Name}}        
+                    {{Name}}, {{Year}}        
                 </h7>
                 <h6>
                     {{Distance}}mi
-                </h6>    
+                </h6> 
                 <h5>
+                    Artist: {{Artist}}
+                </h5>
+                 <h5>
                     Category: {{Category}}
                 </h5>
+                <div class="dtimg">
+                <img src="" alt="{{Picture}}" style="width:304px;height:228px">
+                </div>
+                <br\>
+                <div>    
                 <h5>
+                    <br\>
+                    <br\>    
                     Opening Hours: {{Opening Hours}}
                 </h5>
                 <h5>
                     {{Address}}
                 </h5>
+                </div>        
             </div>
             <div class="dtldscp">
                 <dscpp>
@@ -63,10 +74,7 @@ and open the template in the editor.
                 <br/>
                 <br/>
             </div>
-             <div class="dtimg">
-                <img src="" alt="{{Picture}}" style="width:304px;height:228px">
-
-            </div>
+             
         </div>
         
         <script type="text/javascript" src="cordova.js"></script>
