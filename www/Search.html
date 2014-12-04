@@ -4,8 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html class="ui-mobile">
+    <!--#shadow-root-->
+    <!--<shadow></shadow>-->
+    <!--<style type="text/css"></style>-->
     <head>
+        <!--<base href="http://demos.jquerymobile.com/1.1.1/docs/toolbars/footer-persist-d.html">-->
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -13,12 +17,15 @@ and open the template in the editor.
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="/css/albumdemo.css" />  
+
+        <script src="/js/demoalbum.js"></script>
+
 
 
         <title>UCL Flaxman Art Gallery</title>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <style>
 
@@ -44,7 +51,7 @@ and open the template in the editor.
             #demo{
                 color: white;
             }
-            
+
             .button{
                 margin:20px;
                 font-size:16px;
@@ -52,16 +59,12 @@ and open the template in the editor.
                 padding:5px 10px;
             }
 
-
-
         </style>
-
-
     </head>
 
 
 
-    <body> <!-- ng-app="searchKeyword" ng-controller="MainCtrl"-->
+    <body class="ui-mobile-viewport ui-overlay-c">
         <div class="header">
             <div class="item">Flaxman Art Gallery</div>
 
@@ -80,27 +83,25 @@ and open the template in the editor.
         <div id="grad" style="padding: 5%;"></div>
 
 
-
-        <div class="searchbar">
+<!-- ================ search bar ================= -->
+<!--        <div class="searchbar">
             <form name="form1" method="get" action="searchresults.php">
                 <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
-                <!--                <input id="submit" type="submit" value="Search" />-->
-            </form>
-
-
-        </div>            
+                                <input id="submit" type="submit" value="Search" />
+            </form>-->
+        <!--</div>-->            
         <div class="app">
 
 
 
 
-            <!-- --------------------------------inserted stuff------------------------------ -->
+            <!-- --------------------------------JSON------------------------------ -->
 
             <input id="json" type="button" value="Get and parse JSON" class="button" />
             <br />
             <span id="results"></span>
 
-            
+
             <script>
                 $(function () {
                     $('#json').click(function () {
@@ -117,6 +118,95 @@ and open the template in the editor.
                 });
 
             </script>
+
+<!--	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f" data-position="fixed" data-id="foo">
+		<h1>Albums</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		<a href="../nav.html" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade">Search</a>
+	</div>-->
+	
+	<div data-role="content">
+		<div class="content-primary">
+			<ul data-role="listview" data-theme="d" data-dividertheme="e" data-filter="true" data-filter-theme="d" data-filter-placeholder="Search albums..." data-split-icon="gear" data-split-theme="c">
+			<li><a href="#">
+				<img src="" />
+				<h3>Broken Bells</h3>
+				<p>Broken Bells</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				
+				<img src="" />
+				<h3>Warning</h3>
+				<p>Hot Chip</p>
+				
+			</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Wolfgang Amadeus Phoenix</h3>
+				<p>Phoenix</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Of The Blue Colour Of The Sky</h3>
+				<p>Ok Go</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Elephant</h3>
+				<p>The White Stripes</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Kid A</h3>
+				<p>Radiohead</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>XX</h3>
+				<p>XX</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Congratulations</h3>
+				<p>MGMT</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">
+				<img src="" />
+				<h3>Ashes Grammar</h3>
+				<p>A Sunny Day in Glasgow</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			
+			<li><a href="index.html">
+				<img src="" />
+				<h3>Hot Fuss</h3>
+				<p>Killers</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+			<li><a href="#">	
+				<img src="" />
+				<h3>The Suburbs</h3>
+				<p>Arcade Fire</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
+			</a></li>
+		</ul>
+		
+
+
+			</div><!--/content-primary -->		
+		</div><!-- /content -->
+
+		</div><!-- /page -->
 
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
