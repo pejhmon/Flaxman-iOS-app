@@ -16,34 +16,20 @@ and open the template in the editor.
 
 
 
-        <script>
-            {
-    "title": "St Michael",
-    "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
-    "artist": "John Flaxman",
-    "year": "1819-1824",
-    "location": "Centre of Flaxman Gallery, UCL Main Library",
-    "tags": [
-        "statue",
-        "white",
-        "marble"
-    ]
-}
-            JSON.parse()
-        </script>
-
 
         <!--found some thing!!-->
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!--        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
 
 
         <title>UCL Flaxman Art Gallery</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-        <script src="/searchtest/app.js"></script>
+
+
+        <!--<script src="/searchtest/app.js"></script>-->
 
         <style>
 
@@ -69,17 +55,82 @@ and open the template in the editor.
             #demo{
                 color: white;
             }
-            
+            //for the shifting-----------------------------
             .ui-page {
                 background: transparent;
                 padding-top: 30%;
-                
+                //for the search bar-----------------------------
             }
+            #tfheader{
+                background-color:#c3dfef;
+            }
+            #tfnewsearch{
+                float:right;
+                padding:20px;
+            }
+            .tftextinput2{
+                margin: 0;
+                padding: 5px 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14px;
+                color:#666;
+                border:1px solid #0076a3; border-right:0px;
+                border-top-left-radius: 5px 5px;
+                border-bottom-left-radius: 5px 5px;
+            }
+            .tfbutton2 {
+                margin: 0;
+                padding: 5px 7px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14px;
+                font-weight:bold;
+                outline: none;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                color: #ffffff;
+                border: solid 1px #0076a3; border-right:0px;
+                background: #0095cd;
+                background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+                background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+                border-top-right-radius: 5px 5px;
+                border-bottom-right-radius: 5px 5px;
+            }
+            .tfbutton2:hover {
+                text-decoration: none;
+                background: #007ead;
+                background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+                background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+            }
+            /* Fixes submit button height problem in Firefox */
+            .tfbutton2::-moz-focus-inner {
+                border: 0;
+            }
+            .tfclear{
+                clear:both;
+            }
+            
+                    body{
+            text-align: center;
+            font-family: arial;
+        }
+
+        .button{
+            margin:20px;
+            font-size:16px;
+            font-weight: bold;
+            padding:5px 10px;
+        }
+
 
 
         </style>
 
+    
     </head>
+
+
+
     <body> <!-- ng-app="searchKeyword" ng-controller="MainCtrl"-->
         <div class="header">
             <div class="item">Flaxman Art Gallery</div>
@@ -97,67 +148,61 @@ and open the template in the editor.
             </div>
         </div>
         <div id="grad" style="padding: 5%;"></div>
-<<<<<<< Updated upstream
-=======
-        
-        
-            
+
+
+
         <div class="searchbar">
             <form name="form1" method="get" action="searchresults.php">
                 <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
-<!--                <input id="submit" type="submit" value="Search" />-->
+                <!--                <input id="submit" type="submit" value="Search" />-->
             </form>
 
-            
+
         </div>            
-            <div class="app">
-                <!-- Begin copyright - This must be retained and posted as is to use this script -->
-
-// This Script was created by Satadip Dutta. 
-// Email: sat_dutta@post1.com  / satadipd@inf.com 
-// URL:http://www.angelfire.com/sd/dutta
-// Please honor my hard work, if you use a variant of this in your page, 
-// then please email me :) and keep these comments in the Script.
-// This code is Copyright (c) 1997 Satadip Dutta
-// all rights reserved.
-// License is granted to user to reuse this code on their own Web site 
-// if, and only if, this entire copyright notice is included. The Web Site
-// containing this  script   must be a not-for-profit ( non-commercial ) web site. If the script is to be used in a commercial   
-// website exclusive permission must be obtained before using it.
-// Joe Burns of htmlgoodies.com has been authorised to use this code in the
-// site htmlgoodies.com.
-
-<!-- End copyright - This must be retained and posted as is to use this script -->
-
-title = new Object();
-desc = new Object();
-links= new Object();
-matched= new Object();
-keywords= new Object();
-found= new Object();
-var temp=0;
-// actual location or the item to be searched
-// description of he location
-// actual link
-// percentage match found
-// keywords as parsed from the input
-// # of titles present in the database
-title[0]=10
-//no of keywords after parsing
-keywords[0]=0
-//no of  matches found.
-found[0]=0
-
-<!-- Begin List of Searchable Items -->
-
->>>>>>> Stashed changes
+        <div class="app">
 
 
-<!--------JQUERY STARTS HERE-------------------->
-        <div data-role="page" id="pageone">
-            <div data-role="main" class="ui-content" data->
-                <h2>Search</h2>
-                <!--<div class="searchbar">-->
+
+
+            <!-- --------------------------------inserted stuff------------------------------ -->
+
+            <a href="data.json" target="_blank">Open JSON file</a><br />
+            <input type="button" value="Get and parse JSON" class="button" />
+            <br />
+            <span id="results"></span>
+
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+              <script>
+
+$.getJSON('data.json',
+function(json){
+    $('#results').append('Plugin name: ' + json.name + '<br />Author: ' + json.author);
+    $('#description').append(json.description);
+    $('#title').append(json.title);
+    $('#image').append(json.image);
+
+            });
+
+    </script>
+
+
+
+            <!-- HTML for SEARCH BAR -->
+<!--            <div id="tfheader">
+                <form id="tfnewsearch" method="get" action="http://www.google.com">
+                    <input type="text" id="tfq2b" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
+                </form>
+                <div class="tfclear"></div>
+            </div>-->
+
+
+
+            <!--            ------JQUERY STARTS HERE------------------
+            <div data-role="page" id="pageone">
+                <div data-role="main" class="ui-content" data->
+                    <h2>Search</h2>
+                    <div class="searchbar">
                     <form class="ui-filterable">
                         <input id="searchfor" data-type="search" placeholder="Keywords...">
                     </form>
@@ -177,37 +222,37 @@ found[0]=0
                         <li><a href="#">Ralph</a></li>
                         <li><a href="#">Valarie</a></li>
                     </ul>
-                <!--</div>-->
-            </div>
-        </div> 
+                    </div>
+                </div>
+            </div> -->
 
 
 
 
-        <!--testing script-->
-        <!--        <div class="app">
-                    <p id="demo"></p>
-                </div>-->
+            <!--testing script-->
+            <!--        <div class="app">
+                        <p id="demo"></p>
+                    </div>-->
 
-        <!--test of meanstack-->
+            <!--test of meanstack-->
 
-        <!--        <div ng-repeat="post in posts">{{post}}
-                </div>-->
+            <!--        <div ng-repeat="post in posts">{{post}}
+                    </div>-->
 
-        <!--        <script>
-                    document.getElementById("demo").innerHTML = "abrakadabra DOM";
-                </script>-->
+            <!--        <script>
+                        document.getElementById("demo").innerHTML = "abrakadabra DOM";
+                    </script>-->
 
-        <!--<div id="serverData">Here is where the server sent data will appear</div>-->
 
-        <!--        <div class="searchbar">
-                    <form name="form1" method="get" action="searchresults.php">
-                        <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
-                        <input id="submit" type="submit" value="Search" />
-                    </form>            
-                </div>            -->
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+            <!--        <div class="searchbar">
+                        <form name="form1" method="get" action="searchresults.php">
+                            <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
+                            <input id="submit" type="submit" value="Search" />
+                        </form>            
+                    </div>            -->
+
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
