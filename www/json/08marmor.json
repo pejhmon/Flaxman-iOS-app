@@ -1,0 +1,14 @@
+{
+    "_id": {
+        "$oid": "NULL"
+    },
+    "title": "Marmor Homericum",
+    "description": "The inhabitants of Delos listen as Homer recites the Iliad in this work commissioned by George Grote, one of UCL’s founders.",
+    "artist": "Henri-Joseph-François Triqueti",
+    "year": "1865",
+    "location": "North wall, South Cloisters, Wilkins Building",
+    "tags": [
+        "marble",
+        "intarsia"
+    ]
+}
