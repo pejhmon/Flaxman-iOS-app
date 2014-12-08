@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "$oid": "NULL"
+    },
+    "title": "Female Figure",
+    "description": "Works like this prize-winner by Carrington resulted from the Slade’s pioneering policy allowing women to draw from life.",
+    "artist": "Dora Carrington",
+    "year": "1912",
+    "location": "East wall of Housman Room, North Cloisters, Wilkins Building",
+    "tags": [
+        "painting",
+        "oil",
+        "canvas"
+    ]
+}

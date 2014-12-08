@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "$oid": "NULL"
+    },
+    "title": "The Lord’s Prayer: Deliver us from Evil Monument to the Baring Family",
+    "description": "A believer that angels safeguard the individual, Flaxman shows two angels rescuing a man from the clutches of serpents and falling demons.",
+    "artist": "John Flaxman",
+    "year": "1806-1813",
+    "location": "Centre of middle row, NE wall, Flaxman Gallery",
+    "tags": [
+        "statue",
+        "white",
+        "marble"
+    ]
+}
