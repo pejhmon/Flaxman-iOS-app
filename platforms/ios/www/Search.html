@@ -110,7 +110,7 @@ and open the template in the editor.
 
                         $.getJSON('data.json',
                                 function (json) {
-                                    $('#results').append('Plugin name: ' + json.name + '<br />Author: ' + json.author);
+                                    $('#results').append('Plugin name: ' + json.artworks[0].name + '<br />Author: ' + json.artworks[0].author);
                                     $('#description').append(json.description);
                                     $('#title').append(json.title);
                                     $('#image').append(json.image);
@@ -122,6 +122,7 @@ and open the template in the editor.
             </script>
 
             <script>
+                
                 $(document).ready(function() {
                 var $artdata = $.getJSON('data.json'),
                         myRecords = JSON.parse($artdata.text());
@@ -131,7 +132,7 @@ and open the template in the editor.
                 }
                 });
                         $('#my-table').dynatable();
-                }
+                };
             </script>
 
             <table id="my-final-table">

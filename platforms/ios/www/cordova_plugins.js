@@ -470,7 +470,7 @@ module.exports.metadata =
     "org.apache.cordova.contacts": "0.2.15-dev",
     "org.apache.cordova.device-orientation": "0.3.9",
     "org.apache.cordova.device": "0.2.12",
-    "org.apache.cordova.splashscreen": "0.3.5-dev",
+    "org.apache.cordova.splashscreen": "0.3.5",
     "org.apache.cordova.camera": "0.3.4-dev",
     "org.apache.cordova.dialogs": "0.2.10",
     "org.apache.cordova.device-motion": "0.2.10",

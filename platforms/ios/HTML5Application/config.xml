@@ -70,6 +70,7 @@
     <feature name="Battery">
         <param name="ios-package" value="CDVBattery" />
     </feature>
+    <splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
     <name>HTML5Application</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -79,4 +80,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="SplashScreenDelay" value="20000" />
 </widget>

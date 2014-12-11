@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>81AD4A22-DEF2-4579-91A7-0BC566C1037B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HTML5Application</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1DF123AEF8A5FC7286A865DB4D450190B0C358DF</key>
+		<string>https://github.com/pejhmon/Flaxman-iOS-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/HTML5Application.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1DF123AEF8A5FC7286A865DB4D450190B0C358DF</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pejhmon/Flaxman-iOS-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1DF123AEF8A5FC7286A865DB4D450190B0C358DF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1DF123AEF8A5FC7286A865DB4D450190B0C358DF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Flaxman-iOS-app</string>
+		</dict>
+	</array>
+</dict>
+</plist>
