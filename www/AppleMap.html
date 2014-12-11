@@ -48,6 +48,18 @@ and open the template in the editor.
         </script>
         <script>
             var app = {
+                initialize: function() {
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                var x = width / 2;
+                var y = height / 2;
+
+                mbxmapkit.create();
+                mbxmapkit.setSize( width, height );
+                mbxmapkit.setCenter( x, y );
+                mbxmapkit.show();
+                },
+                
                 showMap: function() {
                     var pins = [
                     {
@@ -112,7 +124,7 @@ and open the template in the editor.
                     };
                     mapKit.changeMapType(mapKit.mapType.MAP_TYPE_SATELLITE, success, error);
                 }
-            }
+            };
         </script>
 
         <script type="text/javascript" src="cordova.js"></script>
