@@ -36,10 +36,16 @@ and open the template in the editor.
         <div id="templates" style="display: none;"></div>
 
         <div class="app">
-            PUT THINGS IN HERE
-            http://plugins.cordova.io/#/package/com.phonegap.plugins.mapkit
+            <h1>Basic Example</h1>
+            <div id="map"></div>
         </div>
 
+
+        <script type="text/javascript">
+          document.addEventListener("deviceready", function(event) {
+            app.initialize();
+          }, false );
+        </script>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
