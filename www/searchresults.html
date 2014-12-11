@@ -11,8 +11,9 @@ and open the template in the editor.
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/dynatable/jquery.dynatable.js"></script>
         <style>
-            #my-final-table, thead, tbody, th {
+            #my-final-table {
                 border: 1px solid black;
+                border-radius: 12px;
             }
             
         </style>
@@ -198,6 +199,7 @@ and open the template in the editor.
         <script>
                     var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
                     $('#my-final-table').dynatable({
+                        
                         dataset: {
                             records: myRecords
                         }
