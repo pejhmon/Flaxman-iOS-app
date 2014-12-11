@@ -455,13 +455,6 @@ module.exports = [
         "clobbers": [
             "navigator.battery"
         ]
-    },
-    {
-        "file": "plugins/com.phonegap.plugins.mapkit/www/MapKit.js",
-        "id": "com.phonegap.plugins.mapkit.mapkit",
-        "clobbers": [
-            "plugin.mapKit"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -482,8 +475,7 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.2.10",
     "org.apache.cordova.device-motion": "0.2.10",
     "org.apache.cordova.network-information": "0.2.14-dev",
-    "org.apache.cordova.battery-status": "0.2.12-dev",
-    "com.phonegap.plugins.mapkit": "0.9.3"
+    "org.apache.cordova.battery-status": "0.2.12-dev"
 }
 // BOTTOM OF METADATA
 });
