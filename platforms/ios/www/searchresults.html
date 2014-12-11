@@ -7,14 +7,27 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
-<link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
-<script src="bower_components/dynatable/jquery.dynatable.js"></script>
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/dynatable/jquery.dynatable.js"></script>
+        <style>
+            #my-final-table {
+                border: 1px solid black;
+                border-radius: 12px;
+            }
+            
+        </style>
+</script>
+<!--        <script src="bower_components/jquery/src/jquery.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
+
+
         <script>
 
         var $artworks = [
             {
-                "name": "amy",
-                "author": "tan",
+//                "name": "amy",
+//                "author": "tan",
                 "id": "1",
                 "title": "St Michael",
                 "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
@@ -113,7 +126,7 @@ and open the template in the editor.
                     "id": "8",
                     "title": "Marmor Homericum",
                     "description": "The inhabitants of Delos listen as Homer recites the Iliad in this work commissioned by George Grote, one of UCL’s founders.",
-                    "artist": "Henri-Joseph-François Triqueti",
+                    "artist": "Henri-Joseph-François Triqueti",
                     "year": "1865",
                     "location": "North wall, South Cloisters, Wilkins Building",
                     "tags": [
@@ -147,14 +160,15 @@ and open the template in the editor.
                     ],
                     "image": "/img/artwork/10rust.jpg"
                 }
-            ],
+            ];
 //                var $records = $('#json-records'),
-                    myRecords = JSON.parse($artworks.text());
-            $('#my-final-table').dynatable({
-                dataset: {
-                    artworks: myRecords
-                }
-            });
+                    //console.log($artworks);
+//                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
+//                    $('#my-final-table').dynatable({
+//                        dataset: {
+//                            artworks: myRecords
+//                        }
+//                    });
 
         </script>
 
@@ -170,11 +184,27 @@ and open the template in the editor.
         <div>TODO write content</div>
         <table id="my-final-table">
                 <thead>
+                <th>ID</th>
                 <th>Title</th>
-                <th>Artist</th>
+                <th>Description</th>
+                <th>Year</th>
+                <th>Location</th>
+                <th>Tags</th>
+                <th>Image</th>
+                
                 </thead>
                 <tbody>
                 </tbody>
             </table>
+        <script>
+                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
+                    $('#my-final-table').dynatable({
+                        
+                        dataset: {
+                            records: myRecords
+                        }
+                    });
+
+        </script>
     </body>
 </html>
