@@ -1,13 +1,7 @@
 {
     "prepare_queue": {
         "installed": [],
-        "uninstalled": [
-            {
-                "plugin": "com.phonegap.plugins.mapkit",
-                "id": "com.phonegap.plugins.mapkit",
-                "topLevel": true
-            }
-        ]
+        "uninstalled": []
     },
     "config_munge": {
         "files": {
@@ -73,7 +67,12 @@
                             "count": 1
                         }
                     ],
-                    "MapKit.framework": []
+                    "MapKit.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
                 }
             },
             "config.xml": {
@@ -146,6 +145,10 @@
                         {
                             "xml": "<feature name=\"Battery\"><param name=\"ios-package\" value=\"CDVBattery\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"MapKit\"><param name=\"ios-package\" value=\"MapKitView\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -209,6 +212,9 @@
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
         "org.apache.cordova.battery-status": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "com.phonegap.plugins.mapkit": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         }
     },
