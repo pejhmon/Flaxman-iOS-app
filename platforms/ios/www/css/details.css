@@ -218,15 +218,21 @@ form{
     /* offset horizontal: half of text area width */
 }
 
+.center-cropped {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 100px;
+  width: 100px;
+}
 .dtimg {
 /*    background:url(../img/uclLogo.png) no-repeat center top;  170px x 200px 
     position:fixed; position in the center of the screen 
     background-size: 350px;
     left:20%;
     top:22%;*/
-    height:200px;                   /* text area height */
+    height:230px;                   /* text area height */
     width:435px;                   /* text area width */
-    text-align:left;
+    text-align:center;
     padding:340px 0px 0px 240px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-295px 0px 0px -195px;  /* offset vertical: half of image height and text area height */
     

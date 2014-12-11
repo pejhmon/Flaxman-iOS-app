@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "$oid": "NULL"
+    },
+    "title": "The Nativity",
+    "description": "In this student prize work by one of Britain’s visionary 20th-century painters the artist’s mature style is instantly recognisable, the monumentality of his figures influenced by post-impressionism and Italian primitivism.",
+    "artist": "Stanley Spencer",
+    "year": "1912",
+    "location": "South wall, Housman Room, North Cloisters",
+    "tags": [
+        "painting",
+        "oil",
+        "canvas"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "_id": {
+        "$oid": "NULL"
+    },
+    "title": "Rustic Scene",
+    "description": "he Times claimed this large-scale work by the student artist and ‘Bright Young Thing’ heralded the revival of mural painting.",
+    "artist": "Rex Whistler",
+    "year": "1925",
+    "location": "Opposite staircase between ground and 1st floors, Foster Court",
+    "tags": [
+        "mural"
+    ]
+}

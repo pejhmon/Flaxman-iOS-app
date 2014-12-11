@@ -7,17 +7,18 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="mustache.js" ></script>
         <script>
-        $(document).ready(function(){
-          $("p:contains(is)").css("background-color","yellow");
-          //when search bar is entered, $("search").get(function(){}
-          //entered keyword is divided by " "
-          //search using the keyword through metadata
-          //if matching words, store the category's data URL and image in .css format
-          //go through all the database and reutrn with the datasets.
-});
-
+            var art1 = {
+                title : "",
+                author : "",
+                year : "",
+                description : "",
+                tags : []
+            };
+            
+            function load temp()
+            
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

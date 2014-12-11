@@ -16,16 +16,16 @@ and open the template in the editor.
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="/css/albumdemo.css" />  
+        <link rel="stylesheet" type="text/css" href="css/index.css" />  
+        <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
 
-        <script src="/js/demoalbum.js"></script>
 
 
 
         <title>UCL Flaxman Art Gallery</title>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="bower_components/dynatable/jquery.dynatable.js"></script>
 
         <style>
 
@@ -83,12 +83,12 @@ and open the template in the editor.
         <div id="grad" style="padding: 5%;"></div>
 
 
-<!-- ================ search bar ================= -->
-<!--        <div class="searchbar">
-            <form name="form1" method="get" action="searchresults.php">
-                <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
-                                <input id="submit" type="submit" value="Search" />
-            </form>-->
+        <!-- ================ search bar ================= -->
+        <!--        <div class="searchbar">
+                    <form name="form1" method="get" action="searchresults.php">
+                        <input id="searchfor" type="text" size="40" maxlength="50" placeholder="Search" />
+                                        <input id="submit" type="submit" value="Search" />
+                    </form>-->
         <!--</div>-->            
         <div class="app">
 
@@ -103,12 +103,14 @@ and open the template in the editor.
 
 
             <script>
+
+
                 $(function () {
                     $('#json').click(function () {
 
                         $.getJSON('data.json',
                                 function (json) {
-                                    $('#results').append('Plugin name: ' + json.name + '<br />Author: ' + json.author);
+                                    $('#results').append('Plugin name: ' + json.artworks[0].name + '<br />Author: ' + json.artworks[0].author);
                                     $('#description').append(json.description);
                                     $('#title').append(json.title);
                                     $('#image').append(json.image);
@@ -119,94 +121,31 @@ and open the template in the editor.
 
             </script>
 
-<!--	<div data-role="page" class="type-interior">
+            <script>
+                
+                $(document).ready(function() {
+                var $artdata = $.getJSON('data.json'),
+                        myRecords = JSON.parse($artdata.text());
+                        $('#my-final-table').dynatable({
+                dataset: {
+                artdata: myRecords
+                }
+                });
+                        $('#my-table').dynatable();
+                };
+            </script>
 
-		<div data-role="header" data-theme="f" data-position="fixed" data-id="foo">
-		<h1>Albums</h1>
-		<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
-		<a href="../nav.html" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade">Search</a>
-	</div>-->
-	
-	<div data-role="content">
-		<div class="content-primary">
-			<ul data-role="listview" data-theme="d" data-dividertheme="e" data-filter="true" data-filter-theme="d" data-filter-placeholder="Search albums..." data-split-icon="gear" data-split-theme="c">
-			<li><a href="#">
-				<img src="" />
-				<h3>Broken Bells</h3>
-				<p>Broken Bells</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				
-				<img src="" />
-				<h3>Warning</h3>
-				<p>Hot Chip</p>
-				
-			</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Wolfgang Amadeus Phoenix</h3>
-				<p>Phoenix</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Of The Blue Colour Of The Sky</h3>
-				<p>Ok Go</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Elephant</h3>
-				<p>The White Stripes</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Kid A</h3>
-				<p>Radiohead</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>XX</h3>
-				<p>XX</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Congratulations</h3>
-				<p>MGMT</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">
-				<img src="" />
-				<h3>Ashes Grammar</h3>
-				<p>A Sunny Day in Glasgow</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			
-			<li><a href="index.html">
-				<img src="" />
-				<h3>Hot Fuss</h3>
-				<p>Killers</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-			<li><a href="#">	
-				<img src="" />
-				<h3>The Suburbs</h3>
-				<p>Arcade Fire</p>
-				</a><a href="#" data-rel="dialog" data-transition="slideup">Purchase album
-			</a></li>
-		</ul>
-		
+            <table id="my-final-table">
+                <thead>
+                <th>Title</th>
+                <th>Artist</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
 
 
-			</div><!--/content-primary -->		
-		</div><!-- /content -->
 
-		</div><!-- /page -->
 
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
