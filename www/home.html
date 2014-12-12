@@ -13,29 +13,10 @@ and open the template in the editor.
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <title>UCL Flaxman Art Gallery</title>
-
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <style>
-            /*
-        div.img {
-            margin: auto;
-            border: 1px solid #0000ff;
-            height: auto;
-            width: 50%;
-            float: right;
-            text-align: center;
-        }	
 
-        div.img img {
-            display: inline;
-            margin: auto;
-            border: 1px solid #ffffff;
-        }
-        div.img a:hover img {
-            border: 1px solid #ffffff;
-        }
-        */
         .app{
             padding: 0% 0% 0% 0%;
             margin: 0% 0% 0% 0%;
@@ -44,20 +25,30 @@ and open the template in the editor.
             display: inline;
         }
         div.image-centre {
-            width: 32.5%;
+            width: 32%;
             height: 0px;
             overflow: hidden;
-            text-align: center;
-            padding: 0% 0% 32.5% 0.8%;
+            padding: 0% 0% 30% 0%;
             float: left;
+            border: 2px solid black;
+            
         }
         div.image-centre a img{
-            min-width: 100%;
-            height: 100%;
+            min-height:100%; 
+            min-width:100%;
+            max-height: 300%;
+            max-width: 300%;
+            object-fit: contain;
             position: relative;
-            left: 100%;
-            margin-left: -200%;
-        }/*
+            margin: -100%;
+
+        }
+        
+        /*
+         
+         
+         
+         
         .image-centre{
             object-fit: none;
             object-position: center;
@@ -79,11 +70,7 @@ and open the template in the editor.
             padding: -50% -10% -10% -10%;
         }*/
         </style>
-        <script type='text/javascript'>
-            var template = document.getElementById('templateTop').innerHTML;
-            var output = Mustache.render(template, view);
-            document.getElementById('person').innerHTML = output;
-        </script>
+
 
     </head>
     <body>
@@ -105,58 +92,71 @@ and open the template in the editor.
         <div id="grad" style="padding: 5%;"></div>
         <div class="app">
             <div class="image-centre">
-                <a href="Details.html">
-                    <img src="img/artwork/01stmichael.JPG" alt="Klematis" >
+                <a href="detailstemplate.html">
+                    <img src="img/artwork/01stmichael.JPG" border="0" alt="Klematis">
                 </a>
             </div>
             <div class="image-centre">
-                <a href="klematis2_big.htm">
-                    <img src="img/artwork/02Lordsprayer.jpg" alt="Klematis" >
+                <a href="detailstemplate.html">
+                    <img src="img/artwork/02Lordsprayer.JPG" border="0" alt="Klematis">
                 </a>
             </div>
             <div class="image-centre">
-                <a target="_blank" href="klematis3_big.htm">
-                    <img src="img/artwork/03brahmin.jpg" alt="Klematis" >
+                <a href="detailstemplate.html">
+                    <img src="img/artwork/03brahmin.JPG" border="0" alt="Klematis">
                 </a>
             </div>
             <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/04four.jpg" alt="Blah" >
+                <a href="detailstemplate.html">
+                    <img src="img/artwork/04four.JPG" border="0" alt="Blah">
                 </a>
             </div>
                         <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/05nativ.jpg" alt="Blah" >
+                <a target="_blank" href="#">
+                    <img src="img/artwork/05nativ.JPG" border="0" alt="Blah">
                 </a>
             </div>
                         <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/06undermilkwood.jpg" alt="Blah" >
+                <a target="_blank" href="#">
+                    <img src="img/artwork/06undermilkwood.JPG" alt="Blah">
                 </a>
             </div>
                         <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/07nude.jpg" alt="Blah" >
+                <a target="_blank" href="#">
+                    <img src="img/artwork/07nude.JPG" alt="Blah">
                 </a>
             </div>
                         <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/08marmor.jpg" alt="Blah" >
+                <a target="_blank" href="#">
+                    <img src="img/artwork/08marmor.JPG" alt="Blah">
                 </a>
             </div>
                         <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/09prosrome.jpg" alt="Blah" >
+                <a target="_blank" href="#">
+                    <img src="img/artwork/09prosrome.JPG" alt="Blah">
                 </a>
             </div>
-                        <div class="image-centre">
-                <a target="_blank" href="klematis5_big.htm">
-                    <img src="img/artwork/10rust.jpg" alt="Blah" >
+                       <div class="image-centre">
+                <a target="_blank" href="#">
+                    <img src="img/artwork/10rust.JPG" alt="Blah">
                 </a>
             </div>
         </div>
 
-        <script type="text/javascript" src="cordova.js"></script>
+        <script>
+            $('.click').click(function() {
+    // get the contents of the link that was clicked
+    var linkText = $(this).text();
+
+    // replace the contents of the div with the link text
+    $('#content-container').html(linkText);
+
+    // cancel the default action of the link by returning false
+    return false;
+});
+        </script>
+
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
