@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/dynatable/jquery.dynatable.js"></script>
-        <style>
-            #my-final-table {
-                border: 1px solid black;
-                border-radius: 12px;
-            }
-
-        </style>
-
-        <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 
-        <script>
-            var $artworks = [
-                {
-                    //                "name": "amy",
-                    //                "author": "tan",
-                    "id": "1",
-                    "title": "St Michael",
-                    "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
+        
+        var $artworks = [
+            {
+//                "name": "amy",
+//                "author": "tan",
+                "id": "1",
+                "title": "St Michael",
+                "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
                     "artist": "John Flaxman",
                     "year": "1819-1824",
                     "location": "Centre of Flaxman Gallery, UCL Main Library",
@@ -159,51 +143,3 @@ and open the template in the editor.
                     "image": "/img/artwork/10rust.jpg"
                 }
             ];
-            //                var $records = $('#json-records'),
-            //console.log($artworks);
-            //                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-            //                    $('#my-final-table').dynatable({
-            //                        dataset: {
-            //                            artworks: myRecords
-            //                        }
-            //                    });
-
-        </script>
-
-
-
-
-
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-        <table id="my-final-table">
-            <thead>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Year</th>
-            <th>Location</th>
-            <th>Tags</th>
-            <th>Image</th>
-
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <script>
-        var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-        $('#my-final-table').dynatable({
-            dataset: {
-                records: myRecords
-            }
-        });
-
-    </script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-</body>
-</html>
