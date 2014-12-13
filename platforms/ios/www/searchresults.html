@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
-        
+
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/dynatable/jquery.dynatable.js"></script>
         <style>
@@ -15,22 +15,20 @@ and open the template in the editor.
                 border: 1px solid black;
                 border-radius: 12px;
             }
-            
+
         </style>
-</script>
-<!--        <script src="bower_components/jquery/src/jquery.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
+
+        <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
 
 
         <script>
-
-        var $artworks = [
-            {
-//                "name": "amy",
-//                "author": "tan",
-                "id": "1",
-                "title": "St Michael",
-                "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
+            var $artworks = [
+                {
+                    //                "name": "amy",
+                    //                "author": "tan",
+                    "id": "1",
+                    "title": "St Michael",
+                    "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
                     "artist": "John Flaxman",
                     "year": "1819-1824",
                     "location": "Centre of Flaxman Gallery, UCL Main Library",
@@ -161,14 +159,14 @@ and open the template in the editor.
                     "image": "/img/artwork/10rust.jpg"
                 }
             ];
-//                var $records = $('#json-records'),
-                    //console.log($artworks);
-//                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-//                    $('#my-final-table').dynatable({
-//                        dataset: {
-//                            artworks: myRecords
-//                        }
-//                    });
+            //                var $records = $('#json-records'),
+            //console.log($artworks);
+            //                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
+            //                    $('#my-final-table').dynatable({
+            //                        dataset: {
+            //                            artworks: myRecords
+            //                        }
+            //                    });
 
         </script>
 
@@ -183,28 +181,29 @@ and open the template in the editor.
     <body>
         <div>TODO write content</div>
         <table id="my-final-table">
-                <thead>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Year</th>
-                <th>Location</th>
-                <th>Tags</th>
-                <th>Image</th>
-                
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        <script>
-                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-                    $('#my-final-table').dynatable({
-                        
-                        dataset: {
-                            records: myRecords
-                        }
-                    });
+            <thead>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Year</th>
+            <th>Location</th>
+            <th>Tags</th>
+            <th>Image</th>
 
-        </script>
-    </body>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
+        $('#my-final-table').dynatable({
+            dataset: {
+                records: myRecords
+            }
+        });
+
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

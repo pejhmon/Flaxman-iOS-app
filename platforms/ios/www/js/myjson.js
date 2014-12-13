@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/details.css" />
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-        <script>
-            
-            window.onload = function(){
-            var url = window.location.search;
-            url = url.replace("?artwork=", ''); // remove the ?artwork=
-            alert(url); //alerts ProjectID=462 is your case
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 
-
-            var $artworks = { "artls": [
-                {
+        
+        var $artworks = [
+            {
 //                "name": "amy",
 //                "author": "tan",
-                    "id": "1",
-                    "title": "St Michael",
-                    "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
+                "id": "1",
+                "title": "St Michael",
+                "description": "Centrepiece of a unique Victorian installation of plaster models, this sculpture of the archangel battling his foe is the final masterpiece of this acclaimed artist.",
                     "artist": "John Flaxman",
                     "year": "1819-1824",
                     "location": "Centre of Flaxman Gallery, UCL Main Library",
@@ -39,7 +20,7 @@ and open the template in the editor.
                         "statue",
                         "plaster"
                     ],
-                    "image": "img/artwork/01stmichael.JPG"
+                    "image": "/img/artwork/01stmichael.JPG"
                 },
                 {
                     "id": "2",
@@ -152,7 +133,7 @@ and open the template in the editor.
                 {
                     "id": "10",
                     "title": "Rustic Scene",
-                    "description": "The Times claimed this large-scale work by the student artist and ‘Bright Young Thing’ heralded the revival of mural painting.",
+                    "description": "he Times claimed this large-scale work by the student artist and ‘Bright Young Thing’ heralded the revival of mural painting.",
                     "artist": "Rex Whistler",
                     "year": "1925",
                     "location": "Opposite staircase between ground and 1st floors, Foster Court",
@@ -161,77 +142,4 @@ and open the template in the editor.
                     ],
                     "image": "/img/artwork/10rust.jpg"
                 }
-            ]};
-
-
-            obj = $artworks;
-                        console.log(obj.artls[url].title);
-            document.getElementById("ptitle").innerHTML = obj.artls[url].title + ", " + obj.artls[url].year;
-            document.getElementById("partist").innerHTML = obj.artls[url].artist;
-            imgurl = obj.artls[url].image;
-            var dtimg= document.getElementById("dtimg");
-            document.getElementById("pdes").innerHTML = obj.artls[url].description;
-
-function insertHTMLImage() {
-        dtimg.innerHTML = '<img src="' + imgurl + '" alt="artworkimg" style="max-width:100%;">';
-      }
-      
-      insertHTMLImage();
-      
-
-//onload end======================
-            };
-
-        </script>
-
-        <title>UCL Flaxman Art Gallery</title>
-    </head>
-    <body>
-        <div class="header">
-            <div class="item">Flaxman Art Gallery</div>
-            <!-- Buttons -->
-            <div class ="menu">
-                <form action="home.html">
-                    <input type="submit" class="Headerbtn" value="&#xe604">
-                </form>
-                <form action="Search.html">
-                    <input type="submit" class="Headerbtn" value="&#xe606">
-                </form>
-                <form action="AppleMap.html">
-                    <input type="submit" class="Headerbtn" value="&#xe609">
-                </form>
-            </div>
-        </div>
-        <div id="grad" style="padding: 5%;"></div>
-        <!--<div style='padding-top: -20%;'>-->
-
-            <!--<div class="dtlheader">-->
-
-                <!--<h7>-->
-                <p id="ptitle"></p>        
-
-                    <h5 id="partist"></h5>
-
-                <div id="dtimg">
-                    <!--<img src="" alt="artworkimg" style="width:304px;height:228px">-->
-                </div>
-
-                <div>    
-
-                    <h5>
-                        {{Address}}
-                    </h5>
-                </div>        
-            <!--</div>-->
-            <h5 id="pdes">
-            </h5>
-
-        <!--</div>-->
-
-
-
-
-        <!--<script type="text/javascript" src="cordova.js"></script>-->
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
-</html>
+            ];

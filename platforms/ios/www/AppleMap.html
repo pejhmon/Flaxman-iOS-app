@@ -24,24 +24,30 @@
         <title>UCL Art Gallery</title>
     </head>
     <body>
+        <div>
+            <a href="maps://maps.apple.com/?q=cupertino">Map Link</a>
+        </div>
+            <!--
+            <script>
+                var lat = 0;
+                var lng = 0;
+                window.location.href = "maps://maps.apple.com/?q="+lat+","+lng;"
+            </script>
+            -->  
+
+        <div class="app">
+            <h1>MapKit iOS</h1>
+
+            <p><a href="#" onclick="app.showMap(); return false;">Show the map</a></p>
+            <p id="returnval"></p>
+
+        </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/MapKit_Stuff.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/MapKit.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-        
-        <div class="app">
-            <button id="show_map" onclick="app.showMap();">showMap</button>
-            <button id="show_map2" onclick="app.changeMapType();">changeMapType</button>
-            <button id="hide_map" onclick="app.hideMap();" style="display:none;">hideMap</button>
-            <button id="clear_map_pins" onclick="app.clearMapPins();" style="display:none;">clearMapPins</button>
-        </div>
-        
-        <div>
-            <a href="maps://maps.apple.com/?q=cupertino">Directions</a>
-            
-        </div>
+
     </body>
 </html>
