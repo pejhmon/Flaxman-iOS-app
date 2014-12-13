@@ -15,13 +15,17 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/details.css" />
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
         <script>
             
-        <script>
-//                $.getJSON("js/myjson.js", function(artworks){
-//                    consolelog("JSON Data: " + artworks[0].title);
-//                }); 
-            var $artworks = [
+            window.onload = function(){
+            var url = window.location.search;
+            url = url.replace("?artwork=", ''); // remove the ?artwork=
+            alert(url); //alerts ProjectID=462 is your case
+
+
+
+            var $artworks = { "artls": [
                 {
 //                "name": "amy",
 //                "author": "tan",
@@ -35,7 +39,7 @@ and open the template in the editor.
                         "statue",
                         "plaster"
                     ],
-                    "image": "/img/artwork/01stmichael.JPG"
+                    "image": "img/artwork/01stmichael.JPG"
                 },
                 {
                     "id": "2",
@@ -148,7 +152,7 @@ and open the template in the editor.
                 {
                     "id": "10",
                     "title": "Rustic Scene",
-                    "description": "he Times claimed this large-scale work by the student artist and ‘Bright Young Thing’ heralded the revival of mural painting.",
+                    "description": "The Times claimed this large-scale work by the student artist and ‘Bright Young Thing’ heralded the revival of mural painting.",
                     "artist": "Rex Whistler",
                     "year": "1925",
                     "location": "Opposite staircase between ground and 1st floors, Foster Court",
@@ -157,15 +161,26 @@ and open the template in the editor.
                     ],
                     "image": "/img/artwork/10rust.jpg"
                 }
-            ];
-//                var $records = $('#json-records'),
-            //console.log($artworks);
-//                    var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-//                    $('#my-final-table').dynatable({
-//                        dataset: {
-//                            artworks: myRecords
-//                        }
-//                    });
+            ]};
+
+
+            obj = $artworks;
+                        console.log(obj.artls[url].title);
+            document.getElementById("ptitle").innerHTML = obj.artls[url].title + ", " + obj.artls[url].year;
+            document.getElementById("partist").innerHTML = obj.artls[url].artist;
+            imgurl = obj.artls[url].image;
+            var dtimg= document.getElementById("dtimg");
+            document.getElementById("pdes").innerHTML = obj.artls[url].description;
+
+function insertHTMLImage() {
+        dtimg.innerHTML = '<img src="' + imgurl + '" alt="artworkimg" style="max-width:100%;">';
+      }
+      
+      insertHTMLImage();
+      
+
+//onload end======================
+            };
 
         </script>
 
@@ -188,81 +203,33 @@ and open the template in the editor.
             </div>
         </div>
         <div id="grad" style="padding: 5%;"></div>
-        <div style='padding-top: -20%;'>
+        <!--<div style='padding-top: -20%;'>-->
 
-            <div class="dtlheader">
+            <!--<div class="dtlheader">-->
 
                 <!--<h7>-->
-                    <div id="title"></div><div id="year"></div>        
-                <!--</h7>-->
-                <h6>
-                    {{Distance}}mi
-                </h6> 
-                <h5>
-                    Artist: {{Artist}}
-                </h5>
-                <h5>
-                    Category: {{Category}}
-                </h5>
-                <div class="dtimg">
-                    <img src="" alt="{{Picture}}" style="width:304px;height:228px">
+                <p id="ptitle"></p>        
+
+                    <h5 id="partist"></h5>
+
+                <div id="dtimg">
+                    <!--<img src="" alt="artworkimg" style="width:304px;height:228px">-->
                 </div>
-                <!--<br\>-->
+
                 <div>    
-                    <h5>
-                        <!--<br\>-->
-                        <!--<br\>-->    
-                        Opening Hours: {{Opening Hours}}
-                    </h5>
+
                     <h5>
                         {{Address}}
                     </h5>
                 </div>        
-            </div>
-            <div class="dtldscp">
-                <!--<dscpp>-->
-                    {{Description1}}
-                    <br/>
-                <!--</dscpp>-->
-                <br/>
-                <!--<dscpp>-->
-                    {{Description2}}
-                <!--</dscpp>-->
-                <br/>
-                <br/>
-            </div>
+            <!--</div>-->
+            <h5 id="pdes">
+            </h5>
 
-        </div>
-
-        <script>
-var url = window.location.search;
-url = url.replace("?artwork=", ''); // remove the ?artwork=
-alert(url); //alerts ProjectID=462 is your case
-// from display.html
-// 
-// 
-//document.getElementById("write").innerHTML = window.location.search; // you will have to parse
-// the query string to extract the
-// parameter you need
-        </script>
-        
-                <script>
+        <!--</div>-->
 
 
 
-
-            function update() {
-//                var parameters = location.search.substring(1).split("&");
-                var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
-                var selected = myRecords[url];
-                console.log(selected);
-
-                title = artworks[url].title;
-                document.getElementById("title").innerHTML = selected.title;
-                document.getElementById("year").innerHTML = selected.year;
-                }
-            }
-            );</script>
 
         <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript" src="js/index.js"></script>
