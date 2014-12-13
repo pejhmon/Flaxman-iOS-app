@@ -6,8 +6,13 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>UCL Flaxman Art Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/dynatable/jquery.dynatable.js"></script>
         <style>
@@ -17,9 +22,11 @@ and open the template in the editor.
             }
 
         </style>
-
+        <title>Search Results</title>
         <link rel="stylesheet" type="text/css" href="bower_components/dynatable/jquery.dynatable.css" />
-
+        
+        
+            
 
         <script>
             var $artworks = [
@@ -175,21 +182,37 @@ and open the template in the editor.
 
 
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     <body>
-        <div>TODO write content</div>
-        <table id="my-final-table">
+        <div class="header">
+            <div class="item">Flaxman Art Gallery</div>
+            <!-- buttons -->
+        <div class ="menu">
+                <form action="home.html">
+                    <input type="submit" class="Headerbtn" value="&#xe604">
+                </form>
+                <form action="Search.html">
+                    <input type="submit" class="Headerbtn" value="&#xe606">
+                </form>
+                <form action="AppleMap.html">
+                    <input type="submit" class="Headerbtn" value="&#xe609">
+                </form>
+            </div>
+            <div><br></div>
+       <table id="my-final-table">
             <thead>
-            <th>ID</th>
+            <!-- <th>ID</th> -->
+            <!-- <th>Image</th> -->
             <th>Title</th>
-            <th>Description</th>
+            <th>Artist</th>    
+            <!-- <th>Description</th>
             <th>Year</th>
             <th>Location</th>
             <th>Tags</th>
-            <th>Image</th>
-
+            <th>Image</th> -->
+<!--  title, artisit, small image, details. address o fimage in jason, header UCL -->
+                
         </thead>
         <tbody>
         </tbody>
