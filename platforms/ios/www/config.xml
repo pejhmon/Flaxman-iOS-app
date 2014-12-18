@@ -17,5 +17,15 @@ and open the template in the editor.
         </author>
         <content src="index.html" />
         <access origin="*" />
+        <!-- for google maps -->
+<access origin="*.googleapis.com" />
+<access origin="*.gstatic.com" />
+<access origin="*.google.com" />
+<access origin="maps.googleapis.com" />
+<access origin="maps.gstatic.com" />
+<access origin="mt0.googleapis.com" />
+<access origin="mt1.googleapis.com" />
+<access origin="csi.gstatic.com" />
+<preference name="OpenAllWhitelistURLsInWebView" value="false" />
     </widget>
 </root>

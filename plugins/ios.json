@@ -255,7 +255,7 @@
                     ],
                     "Google Maps API Key": [
                         {
-                            "xml": "<string>AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI</string>",
+                            "xml": "<string>AIzaSyBi0XES05Ivlxyyf5FvpHofihVMVVbatis</string>",
                             "count": 1
                         }
                     ],
@@ -331,7 +331,7 @@
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
         "plugin.google.maps": {
-            "API_KEY_FOR_IOS": "AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI",
+            "API_KEY_FOR_IOS": "AIzaSyBi0XES05Ivlxyyf5FvpHofihVMVVbatis",
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         }
     },

@@ -182,10 +182,10 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+    <key>Google Maps API Key</key>
+    <string>AIzaSyBi0XES05Ivlxyyf5FvpHofihVMVVbatis</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>Show your location on the map</string>
-    <key>Google Maps API Key</key>
-    <string>AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Trace your location on the map</string>
     <key>CFBundleURLTypes</key>
