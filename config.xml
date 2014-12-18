@@ -10,5 +10,5 @@
     <content src="index.html"/>
     <access origin="*"/>
     
-    <preference name="SplashScreenDelay" value="20000" />
+    <preference name="SplashScreenDelay" value="20000"/>
 </widget>

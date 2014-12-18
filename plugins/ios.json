@@ -4,22 +4,41 @@
         "uninstalled": []
     },
     "config_munge": {
-<<<<<<< HEAD
-        "files": {}
-=======
         "files": {
             "framework": {
                 "parents": {
-                    "AudioToolbox.framework": [
+                    "MapKit.framework": [
                         {
                             "xml": "true",
-                            "count": 2
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.dylib": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        },
+                        {
+                            "xml": "false",
+                            "count": 1
                         }
                     ],
                     "CoreLocation.framework": [
                         {
                             "xml": "false",
-                            "count": 3
+                            "count": 4
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 5
                         }
                     ],
                     "AssetsLibrary.framework": [
@@ -34,12 +53,6 @@
                             "count": 3
                         }
                     ],
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": "false",
-                            "count": 5
-                        }
-                    ],
                     "AddressBook.framework": [
                         {
                             "xml": "true",
@@ -52,40 +65,137 @@
                             "count": 1
                         }
                     ],
-                    "ImageIO.framework": [
-                        {
-                            "xml": "true",
-                            "count": 1
-                        }
-                    ],
                     "CoreMotion.framework": [
                         {
                             "xml": "false",
                             "count": 1
                         }
                     ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 2
+                        }
+                    ],
                     "SystemConfiguration.framework": [
                         {
                             "xml": "true",
                             "count": 1
+                        },
+                        {
+                            "xml": "false",
+                            "count": 1
                         }
                     ],
-                    "MapKit.framework": []
+                    "AVFoundation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreData.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreText.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "GLKit.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libc++.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libicucore.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "OpenGLES.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
                 }
             },
             "config.xml": {
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+                            "xml": "<feature name=\"MBXMapKit\"><param name=\"ios-package\" value=\"CDVMBXMapKit\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "xml": "<feature name=\"Battery\"><param name=\"ios-package\" value=\"CDVBattery\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Contacts\"><param name=\"ios-package\" value=\"CDVContacts\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"ios-package\" value=\"CDVCompass\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
                         },
                         {
@@ -101,19 +211,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Contacts\"><param name=\"ios-package\" value=\"CDVContacts\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Compass\"><param name=\"ios-package\" value=\"CDVCompass\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
                         },
                         {
@@ -121,27 +219,23 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "xml": "<feature name=\"HttpRequest\"><param name=\"ios-package\" value=\"HttpRequest\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "xml": "<feature name=\"GoogleMaps\"><param name=\"ios-package\" value=\"GoogleMaps\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "xml": "<feature name=\"External\"><param name=\"ios-package\" value=\"External\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Battery\"><param name=\"ios-package\" value=\"CDVBattery\" /></feature>",
+                            "xml": "<feature name=\"Geocoder\"><param name=\"ios-package\" value=\"Geocoder\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -153,6 +247,28 @@
                         {
                             "xml": "<string />",
                             "count": 2
+                        },
+                        {
+                            "xml": "<string>Show your location on the map</string>",
+                            "count": 1
+                        }
+                    ],
+                    "Google Maps API Key": [
+                        {
+                            "xml": "<string>AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI</string>",
+                            "count": 1
+                        }
+                    ],
+                    "NSLocationAlwaysUsageDescription": [
+                        {
+                            "xml": "<string>Trace your location on the map</string>",
+                            "count": 2
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>com.coolappz.HTML5Application</string><key>CFBundleURLSchemes</key><array><string>com.coolappz.HTML5Application</string></array></dict></array>",
+                            "count": 1
                         }
                     ]
                 }
@@ -160,13 +276,40 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.vibration": {
+        "com.angelolakra.cordova.mbxmapkit": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
-        "org.apache.cordova.geolocation": {
+        "org.apache.cordova.battery-status": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.contacts": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.device-orientation": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
         "org.apache.cordova.file": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "org.apache.cordova.geolocation": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
         "org.apache.cordova.globalization": {
@@ -178,38 +321,26 @@
         "org.apache.cordova.media-capture": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
-        "org.apache.cordova.file-transfer": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.contacts": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.device-orientation": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.device": {
+        "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
-        "org.apache.cordova.camera": {
+        "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         },
-        "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.device-motion": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.coolappz.HTML5Application"
-        },
-        "org.apache.cordova.battery-status": {
+        "plugin.google.maps": {
+            "API_KEY_FOR_IOS": "AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI",
             "PACKAGE_NAME": "com.coolappz.HTML5Application"
         }
->>>>>>> FETCH_HEAD
     },
-    "installed_plugins": {},
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "plugin.http.request": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        },
+        "com.googlemaps.ios": {
+            "PACKAGE_NAME": "com.coolappz.HTML5Application"
+        }
+    }
 }

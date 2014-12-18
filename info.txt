@@ -1,0 +1,31 @@
+Node version: v0.10.33
+
+Cordova version: 4.1.2
+
+Config.xml file: 
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.coolappz.HTML5Application" version="1.0.0">
+    <name>HTML5Application</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html"/>
+    <access origin="*"/>
+    
+    <preference name="SplashScreenDelay" value="20000" />
+</widget>
+
+
+Plugins: 
+
+com.angelolakra.cordova.mbxmapkit,com.phonegap.plugins.mapkit,nl.x-services.plugins.socialsharing,org.apache.cordova.battery-status,org.apache.cordova.camera,org.apache.cordova.console,org.apache.cordova.contacts,org.apache.cordova.device,org.apache.cordova.device-motion,org.apache.cordova.device-orientation,org.apache.cordova.dialogs,org.apache.cordova.file,org.apache.cordova.file-transfer,org.apache.cordova.geolocation,org.apache.cordova.globalization,org.apache.cordova.media,org.apache.cordova.media-capture,org.apache.cordova.network-information,org.apache.cordova.splashscreen,org.apache.cordova.vibration,plugin.google.maps
+
+iOS platform:
+
+Xcode 6.1.1
+Build version 6A2008a
+

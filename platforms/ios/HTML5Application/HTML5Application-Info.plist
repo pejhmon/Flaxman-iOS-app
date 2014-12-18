@@ -182,5 +182,24 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Show your location on the map</string>
+    <key>Google Maps API Key</key>
+    <string>AIzaSyCNNLhnGQNnxGkSMChRkG6Dk6EfbEGFnJI</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Trace your location on the map</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.coolappz.HTML5Application</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.coolappz.HTML5Application</string>
+        </array>
+      </dict>
+    </array>
   </dict>
 </plist>
