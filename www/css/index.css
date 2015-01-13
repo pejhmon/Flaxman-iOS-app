@@ -79,12 +79,17 @@ body {
     height:auto;
     padding-bottom: 4%;
 }
+
+
 /*Flaxman Gallery logo*/
 .item{
     display:inline-block;
-    padding:5% 0% 0% 2%;
-    margin:0px;
-    color:white;
+    padding:5% 0% 0% 30%;
+    /*margin:50px;*/
+    width: 100%;
+    color: white;
+    background-color: #e74c3c;
+    border: 1px solid #333333;
 }
 .container {
     overflow: hidden;
@@ -98,20 +103,26 @@ body {
     display: inline-block; 
     padding: 2px 2px;
 }
+.menu {
+        line-height: 1;
+        /*display: inline-block;*/
+           margin: 0px;
+}
 .Headerbtn {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
-    border-radius: 28px;
+    /*border-radius: 13px;*/
     font-family: Arial;
-    color: #ffffff;
-    font-size: 5.5vmin;
-    background: transparent;
+    color: antiquewhite;
+    background-color: crimson;
+    font-size: 8.6vmin;
+    /*background: transparent;*/
     padding: 2% 2% 2% 2%;
     text-decoration: none;
     border: 0px;
 }
 .Headerbtn:hover {
-    color: #4D224F;
+    color: #AA6E1F;
     text-decoration: none;
 }
 form{
