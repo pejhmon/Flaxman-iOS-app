@@ -16,11 +16,26 @@ and open the template in the editor.
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/dynatable/jquery.dynatable.js"></script>
         <style>
+            
+            th, td {
+    padding: 10px;
+    /*border: 1px solid black;*/
+    /*border-collapse: collapse;*/
+}
+th{
+    background-color:thistle;
+    border-radius: 4px;
+}
+            
+            
             #my-final-table {
-                border: 1px solid black;
-                border-radius: 12px;
-                color: #ffffff;
+                background-color: white;
+                /*border: 1px solid white;*/
+                border-radius: 4px;
+                color: black;
                 text-align: left;
+                width: 100%;
+                font-size: 14px;
             }
 
         </style>
@@ -45,7 +60,8 @@ and open the template in the editor.
                         "statue",
                         "plaster"
                     ],
-                    "image": "/img/artwork/01stmichael.JPG"
+                    "image": "/img/artwork/01stmichael.JPG",
+                    "link": "<a href = detailstemplate.html?artwork=0 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "2",
@@ -59,7 +75,8 @@ and open the template in the editor.
                         "white",
                         "marble"
                     ],
-                    "image": "/img/artwork/02Lordsprayer.jpg"
+                    "image": "/img/artwork/02Lordsprayer.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=1 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "3",
@@ -73,7 +90,8 @@ and open the template in the editor.
                         "white",
                         "marble"
                     ],
-                    "image": "/img/artwork/03brahmin.jpg"
+                    "image": "/img/artwork/03brahmin.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=2 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "4",
@@ -85,7 +103,8 @@ and open the template in the editor.
                     "tags": [
                         "mural"
                     ],
-                    "image": "/img/artwork/04four.jpg"
+                    "image": "/img/artwork/04four.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=3 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "5",
@@ -99,7 +118,8 @@ and open the template in the editor.
                         "oil",
                         "canvas"
                     ],
-                    "image": "/img/artwork/05nativ.jpg"
+                    "image": "/img/artwork/05nativ.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=4 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "6",
@@ -113,7 +133,8 @@ and open the template in the editor.
                         "oil",
                         "canvas"
                     ],
-                    "image": "/img/artwork/06undermilkwood.jpg"
+                    "image": "/img/artwork/06undermilkwood.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=5 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "7",
@@ -127,7 +148,8 @@ and open the template in the editor.
                         "oil",
                         "canvas"
                     ],
-                    "image": "/img/artwork/07nude.jpg"
+                    "image": "/img/artwork/07nude.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=6 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "8",
@@ -141,7 +163,8 @@ and open the template in the editor.
                         "intarsia",
                         "George Grote"
                     ],
-                    "image": "/img/artwork/08marmor.jpg"
+                    "image": "/img/artwork/08marmor.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=7 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "9",
@@ -153,7 +176,8 @@ and open the template in the editor.
                     "tags": [
                         "etching"
                     ],
-                    "image": "/img/artwork/09prosrome.jpg"
+                    "image": "/img/artwork/09prosrome.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=8 style= \"text-decoration: none;\">◯</a>"
                 },
                 {
                     "id": "10",
@@ -165,7 +189,8 @@ and open the template in the editor.
                     "tags": [
                         "mural"
                     ],
-                    "image": "/img/artwork/10rust.jpg"
+                    "image": "/img/artwork/10rust.jpg",
+                    "link": "<a href = detailstemplate.html?artwork=9 style= \"text-decoration: none;\">◯</a>"
                 }
             ];
             //                var $records = $('#json-records'),
@@ -200,15 +225,20 @@ and open the template in the editor.
                 <form action="AppleMap.html">
                     <input type="submit" class="Headerbtn" value="&#xe609">
                 </form>
-            </div>
-            <!-- <div id="grad" style="padding: 5%;"></div> -->
-            <div><br></div>
-       <table id="my-final-table">
+           
+        </div>
+            <div style="padding: 2%;"></div>
+            <div id="grad" style="padding: 5%;"></div> 
+       
+            <div style="padding: 2%;">
+                <table id="my-final-table">
+           
             <thead>
             <!-- <th>ID</th> -->
             <!-- <th>Image</th> -->
             <th>Title</th>
-            <th>Artist</th>    
+            <th>Artist</th>
+            <th>Link</th>
             <!-- <th>Description</th>
             <th>Year</th>
             <th>Location</th>
@@ -220,6 +250,7 @@ and open the template in the editor.
         <tbody>
         </tbody>
     </table>
+                </div>
     <script>
         var myRecords = jQuery.parseJSON(JSON.stringify($artworks));
         $('#my-final-table').dynatable({
