@@ -112,6 +112,8 @@ body {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     /*border-radius: 13px;*/
+    -webkit-appearance:none;
+    input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
     font-family: Arial;
     color: antiquewhite;
     background-color: crimson;
