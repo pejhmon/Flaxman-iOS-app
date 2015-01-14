@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -17,147 +12,129 @@ and open the template in the editor.
 
         <title>UCL Flaxman Art Gallery</title>
         <style>
-
-
-
             .app{
-                padding: 0% 0% 0% 0%;
-                margin: 0% 0% 0% 0%;
-                width: 100%;
-                height: 100%;
                 display: inline;
             }
-            div.image-centre {
-                width: 32%;
-                padding: 0% 1.2% 0% 0%;
-                float: left;
-                border: none;
-                /*
-                border: 2px solid black;
-                background-size: 100% 100%;
-                background-repeat: no-repeat;
-                */
-            }
             div.image-centre input{
-                width: 100px;
-                height: 100px;
-                overflow: hidden;
+                width: 97%;
+                height: 90px;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-color: transparent;
                 border: none;
+                border-radius: 10%;
                 display: block;
             }
-            
-            
-            /*
-            div.image-centre a background-image{
-                //min-height:100%; 
-                min-width:100%;
-                max-height: 100%;
-                //max-width: 300%;
-                object-fit: contain;
-                position: relative;
-                margin: -100%;
-
+            div.image-banner input{
+                width: 99%;
+                height: 100px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-color: transparent;
+                border: none;
+                border-radius: 0%;
+                display: block;
             }
-*/
-            /*
-             
-             
-             
-             
-            .image-centre{
-                object-fit: none;
-                object-position: center;
-                height: 100%;
-                width: 100%;
-            }*/
-            /*
-            .thing{
-                position: relative;
-                width: 32.5%;
-                height: 0px;
-                overflow: hidden;
-                padding: 0% 0% 32.5% 0.8%;
-                float: left;
-            }
-            .thing img{
-                display: inline;
-                width: 100%;
-                padding: -50% -10% -10% -10%;
-            }*/
         </style>
 
 
     </head>
     <body>
         <div class="header">
-            <div class="item">UCL Art Gallery</div>
+            <div class="item">UCL Art Museum</div>
             <!-- Buttons -->
             <div class ="menu">
-                <form action="home.html">
+                <form action="home.html" class="first">
                     <input type="submit" class="Headerbtn" value="&#xe604">
                 </form>
-                <form action="Search.html">
+                <form action="searchresults.html">
                     <input type="submit" class="Headerbtn" value="&#xe606">
                 </form>
-                <form action="AppleMap.html">
+                <form action="testmapkit.html">
                     <input type="submit" class="Headerbtn" value="&#xe609">
                 </form>
             </div>
         </div>
         <div id="grad" style="padding: 5%;"></div>
         <div class="app">
-            <form action="detailstemplate.html" method="get">
-                <div class="image-centre">
-                    <input type= "submit" name="artwork" value="0"
-                           style="background-image: url(img/artwork/01stmichael.JPG)" />
-                </div>
-                <div class="image-centre">
-                    <input type="submit" name="artwork" value="1"
-                           style="background-image: url(img/artwork/02Lordsprayer.JPG)" />
-                    
-                </div>
-                <div class="image-centre">
-                    <input type="submit" name="artwork" value="2" 
-                           style="background-image: url(img/artwork/03brahmin.JPG); background-size: 150%; padding-top: -125%" />
-
-                </div>
-                <div class="image-centre">
-                    <input type="submit" name="artwork" value="3"
-                           style="background-image: url(img/artwork/04four.JPG)" />
-                </div>
-                <div class="image-centre">
-                    <input type="submit" name="artwork" value="4"
-                           style="background-image: url(img/artwork/05nativ.JPG)" />
-                </div>
-                <div class="image-centre">
-                    <input type="image" src="img/artwork/06undermilkwood.JPG" alt="05">
-                </div>
-                <div class="image-centre">
-                    <a target="_blank" href="#">
-                        <img src="img/artwork/07nude.JPG" alt="06">
-                    </a>
-                </div>
-                <div class="image-centre">
-                    <a target="_blank" href="#">
-                        <img src="img/artwork/08marmor.JPG" alt="07">
-                    </a>
-                </div>
-                <div class="image-centre">
-                    <a target="_blank" href="#">
-                        <img src="img/artwork/09prosrome.JPG" alt="08">
-                    </a>
-                </div>
-                <div class="image-centre">
-                    <a target="_blank" href="#">
-                        <img src="img/artwork/10rust.JPG" alt="09">
-                    </a>
-                </div>
+            <form action="detailstemplate.html" method="get" class="first">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type= "submit" name="artwork" value="0"
+                                       style="background-image: url(img/artwork/01stmichael.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="1"
+                                       style="background-image: url(img/artwork/02Lordsprayer.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="2"
+                                       style="background-image: url(img/artwork/03brahmin.JPG); background-size: 150%; padding-top: -125%" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="3"
+                                       style="background-image: url(img/artwork/04four.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="4"
+                                       style="background-image: url(img/artwork/05nativ.JPG); background-size: 150%; padding-top: -125%" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="5"
+                                       style="background-image: url(img/artwork/06undermilkwood.JPG)">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="6"
+                                       style="background-image: url(img/artwork/07nude.JPG);
+                                       background-size:140%">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="7"
+                                       style="background-image: url(img/artwork/08marmor.JPG);
+                                       background-size:125%">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="9"
+                                       style="background-image: url(img/artwork/10rust.JPG)">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                        <div class="image-banner">
+                            <input type="submit" name="artwork" value="8"
+                                   style="background-image: url(img/artwork/09prosrome.JPG)">
+                        </div>
+                        </td>
+                    </tr>
+                </table>
             </form>
-
         </div>
 
 
