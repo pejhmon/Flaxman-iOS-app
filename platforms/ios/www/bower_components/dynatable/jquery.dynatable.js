@@ -45,7 +45,7 @@
 
   defaults = {
     features: {
-      paginate: true,
+      paginate: false,
       sort: true,
       pushState: true,
       search: true,
