@@ -22,9 +22,6 @@ and open the template in the editor.
             var url = window.location.search;
             url = url.replace("?artwork=", ''); // remove the ?artwork=
             alert(url); //alerts ProjectID=462 is your case
-
-
-
             var $artworks = { "artls": [
                 {
 //                "name": "amy",
@@ -180,7 +177,7 @@ and open the template in the editor.
             document.getElementById("partist").innerHTML = obj.artls[url].artist;
             imgurl = obj.artls[url].image;
             var dtimg= document.getElementById("dtimg");
-        document.getElementById("paddress").innerHTML = obj.artls[url].address;    
+        document.getElementById("paddress").innerHTML = obj.artls[url].location;    
         document.getElementById("pdes").innerHTML = obj.artls[url].description;
 
 function insertHTMLImage() {
@@ -196,6 +193,67 @@ function insertHTMLImage() {
         </script>
 
         <title>UCL Flaxman Art Gallery</title>
+        <style>
+            .boxstyle {
+                box-shadow: 0 0 10px #e74c3c;
+                background-color: #e74c3c;
+                padding: 2% 0% 0% 5%;
+                opacity: 1;
+            }
+            
+            #ptitle {
+                padding: 1% 0% 0% 1%;
+                font-size: 140%;
+                color: white;
+                font-weight: 700;
+                
+                
+            }
+            
+            #dtimg {
+                margin: 10px;
+            }
+            
+            #partist {
+                text-align: right;
+                padding-right: 5%;
+                position: relative;
+                bottom: 20px;
+                color: white;
+                font-style: italic;
+            }
+            
+            #description{
+                margin: 10px;
+                box-shadow: 0 0 10px #aaa;
+                padding: 5px;
+                font-size: 15px;
+                background-color: white;
+                opacity: 0.9;
+                color: black;
+            }
+            #paddress {
+                text-align: right;
+                margin-right: 15%;
+                margin: 10%;
+                margin-bottom: 10%;
+                margin-top: 10%;
+                line-height: 1.5em;
+            }
+            
+            #pdes {
+                text-indent: 50px;
+                margin: 3%;
+                box-shadow: 0 0 10px #aaa;
+                padding: 12% 5% 12% 5%;
+                font-size: 15px;
+                background-color: white;
+                opacity: 1;
+                color: black;
+                line-height: 2em;
+            }
+            
+        </style>
     </head>
     <body>
         <div class="header">
@@ -214,30 +272,22 @@ function insertHTMLImage() {
             </div>
         </div>
         <div id="grad" style="padding: 5%;"></div>
-        <!--<div style='padding-top: -20%;'>-->
+        
 
-            <!--<div class="dtlheader">-->
-
-                <!--<h7>-->
+        
+        <div id="dtimg"></div>
+        <div id="description">
+            <div class="boxstyle">
                 <p id="ptitle"></p>        
-
-                    <h5 id="partist"></h5>
-
-                <div id="dtimg">
-                    <!--<img src="" alt="artworkimg" style="width:304px;height:228px">-->
-                </div>
-
-                <div>    
-
-                    <h5 id="paddress"></h5>
+            <p id="partist"></p>       
+        </div>
+                <div>   
+                <h5 id="paddress"> </h5>
                 </div>        
-            <!--</div>-->
+
             <h5 id="pdes">
             </h5>
-
-        <!--</div>-->
-
-
+        </div>
 
 
         <!--<script type="text/javascript" src="cordova.js"></script>-->
