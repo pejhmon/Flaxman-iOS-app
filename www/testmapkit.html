@@ -59,7 +59,7 @@
                 ['Wilkins Building', 51.524736, -0.133539, 7],
                 ['Wilkins Building', 51.524735, -0.133539, 8],
                 ['Wilkins Building', 51.524734, -0.133539, 9],
-                ['Rustic Scene', 51.52353, -0.132407, 10]
+                ['Foster Court', 51.52353, -0.132407, 10]
             ];
             
             var contentHTML = [
@@ -155,7 +155,7 @@
                     return function() {
                         infowindow.setContent(locations[i][0]);
                         infowindow.open(map, marker);
-                    }
+                    };
                 })(marker, i));
             }
         </script>

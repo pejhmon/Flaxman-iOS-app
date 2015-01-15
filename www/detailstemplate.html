@@ -207,14 +207,13 @@ function insertHTMLImage() {
         <title>UCL Flaxman Art Gallery</title>
         <style>
             .boxstyle {
-                box-shadow: 0 0 10px #e74c3c;
-                background-color: #e74c3c;
+                box-shadow: 0 0 10px #4C224F;
+                background-color: #4C224F;
                 padding: 2% 0% 0% 5%;
-                opacity: 1;
             }
             
             #ptitle {
-                padding: 5% 0% 0% 1%;
+                padding-top: 2%;
                 font-size: 140%;
                 color: white;
                 font-weight: 700;
@@ -235,34 +234,40 @@ function insertHTMLImage() {
                 font-style: italic;
             }
             
-            #description{
+            #descriptionbox{
                 margin: 10px;
-                box-shadow: 0 0 10px #aaa;
                 padding: 5px;
                 font-size: 15px;
-                background-color: white;
                 opacity: 0.9;
                 color: black;
             }
+            s
             #paddress {
-                text-align: right;
-                margin-right: 15%;
-                margin: 10%;
-                margin-bottom: 10%;
+                text-align: center;
                 margin-top: 10%;
-                line-height: 1.5em;
+                color: #886F1F;
+                font-weight: 600;
+            }
+            
+            #pmap {
+                text-align: center;
+                margin-bottom: 10%;
             }
             
             #pdes {
-                text-indent: 50px;
-                margin: 3%;
-                box-shadow: 0 0 10px #aaa;
-                padding: 12% 5% 12% 5%;
-                font-size: 15px;
+                text-indent: 30px;
+                margin: 0%;
                 background-color: white;
-                opacity: 1;
                 color: black;
-                line-height: 2em;
+                line-height: 1.5em;
+                text-align: justify;
+            }
+            #textbox {
+                
+                font-size: 13px;
+                background-color: white;
+                box-shadow: 0 0 10px #aaa;
+                padding: 12% 5% 10% 5%;
             }
             
         </style>
@@ -278,7 +283,7 @@ function insertHTMLImage() {
                 <form action="searchresults.html">
                     <input type="submit" class="Headerbtn" value="&#xe606">
                 </form>
-                <form action="AppleMap.html">
+                <form action="testmapkit.html">
                     <input type="submit" class="Headerbtn" value="&#xe609">
                 </form>
             </div>
@@ -288,18 +293,19 @@ function insertHTMLImage() {
 
         
         <div id="dtimg"></div>
-        <div id="description">
+        <div id="descriptionbox">
             <div class="boxstyle">
                 <p id="ptitle"></p>        
             <p id="partist"></p>       
         </div>
-                <div>   
-                <h5 id="paddress"> </h5>
-                <p id="pmap">Map</p>
-                </div>        
+ 
 
-            <h5 id="pdes">
-            </h5>
+            <div id="textbox">
+            <h5 id="pdes"></h5>
+            <h5 id="paddress"></h5>
+            <p id="pmap"></p>
+            </div>
+      
         </div>
 
 

@@ -84,13 +84,15 @@ body {
 /*Flaxman Gallery logo*/
 .item{
     display:inline-block;
-    padding:5% 0% 0% 30%;
+    padding:3% 0% 0% 5%;
     /*margin:50px;*/
     width: 100%;
     color: white;
-    background-color: #e74c3c;
-    border: 1px solid #333333;
+    background: #343333;
+    /*opacity: 0.1;*/
+    box-shadow: 0 0 10px #343333;
 }
+
 .container {
     overflow: hidden;
 }
@@ -102,6 +104,8 @@ body {
     color: ButtonText;
     display: inline-block; 
     padding: 2px 2px;
+    
+    
 }
 .menu {
         line-height: 1;
@@ -116,9 +120,8 @@ body {
     input[type=submit], input[type=Reset]{ -webkit-appearance:none; }
     font-family: Arial;
     color: antiquewhite;
-    background-color: crimson;
+    background-color: transparent;
     font-size: 8.6vmin;
-    /*background: transparent;*/
     padding: 2% 2% 2% 2%;
     text-decoration: none;
     border: 0px;
@@ -126,6 +129,7 @@ body {
 .Headerbtn:hover {
     color: #AA6E1F;
     text-decoration: none;
+    
 }
 form{
     margin-left: -2%;
