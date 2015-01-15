@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+        <title>UCL Flaxman Art Gallery</title>
+        <style>
+            .app{
+                display: inline;
+            }
+            div.image-centre input{
+                width: 97%;
+                height: 100px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-color: transparent;
+                color: rgba(0,0,0,0);
+                border-radius: 10%;
+                border: none;
+                display: block;
+            }
+            div.image-banner input{
+                width: 99%;
+                height: 100px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-color: transparent;
+                color: rgba(0,0,0,0);
+                border: none;
+                border-radius: 0%;
+                display: block;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="item">UCL Art Museum</div>
+            <!-- Buttons -->
+            <div class ="menu">
+                <form action="index.html" class="first">
+                    <input type="submit" class="Headerbtn" value="&#xe604">
+                </form>
+                <form action="searchresults.html">
+                    <input type="submit" class="Headerbtn" value="&#xe606">
+                </form>
+                <form action="testmapkit.html">
+                    <input type="submit" class="Headerbtn" value="&#xe609">
+                </form>
+            </div>
+        </div>
+        <div id="grad" style="padding: 5%;"></div>
+        <div class="app">
+            <form action="detailstemplate.html" method="get" class="first">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type= "submit" name="artwork" value="0"
+                                       style="background-image: url(img/artwork/01stmichael.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="1"
+                                       style="background-image: url(img/artwork/02Lordsprayer.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="2"
+                                       style="background-image: url(img/artwork/03brahmin.JPG);
+                                       background-size: 150%; padding-top: -125%" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="3"
+                                       style="background-image: url(img/artwork/04four.JPG)" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="4"
+                                       style="background-image: url(img/artwork/05nativ.JPG);
+                                       background-size: 150%; padding-top: -125%" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="5"
+                                       style="background-image: url(img/artwork/06undermilkwood.JPG)"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="6"
+                                       style="background-image: url(img/artwork/07nude.JPG);
+                                       background-size:140%"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="7"
+                                       style="background-image: url(img/artwork/08marmor.JPG);
+                                       background-size:125%"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-centre">
+                                <input type="submit" name="artwork" value="9"
+                                       style="background-image: url(img/artwork/10rust.JPG)">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                        <div class="image-banner">
+                            <input type="submit" name="artwork" value="8"
+                                   style="background-image: url(img/artwork/09prosrome.JPG)">
+                        </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
