@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            
+//there is an issue with adding CSS style sheet, the map stops working?? please check
+//        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+//testing... eimi==================
+
+//var map = plugin.google.maps.Map.getMap();
+//map.addEventListener(plugin.google.maps.event.MAP_READY, function onMapInit(map) {
+//  // The map is initialized, then show a map dialog
+//
+//            const UCL = new plugin.google.maps.LatLng(51.52244, - 0.13737);
+//                    var map = plugin.google.maps.Map.getMap({
+//                        
+//                    'backgroundColor': 'white',
+//                            'mapType': plugin.google.maps.MapTypeId.ROADMAP,
+//                            'controls': {
+//                            'compass': true,
+//                                    'myLocationButton': true,
+//                                    'indoorPicker': true,
+//                                    'zoom': true
+//                            },
+//                            'gestures': {
+//                            'scroll': true,
+//                                    'tilt': true,
+//                                    'rotate': true
+//                            },
+//                            'camera': {
+//                            'latLng': UCL,
+//                                    'tilt': 30,
+//                                    'zoom': 15,
+//                                    'bearing': 50
+//                            }
+//                    });
+//            });
+                    //getmylocation() method==============================
+
+//                    var onSuccess = function (location) {
+//
+////  var msg = ["Current your location:\n",
+////    "latitude:" + location.latLng.lat,
+////    "longitude:" + location.latLng.lng,
+////    "speed:" + location.speed,
+////    "time:" + location.time,
+////    "bearing:" + location.bearing].join("\n");
+//
+//                        map.addMarker({
+//                            'position': location.latLng
+//                            
+////    ,
+////    'title': msg
+//                        }, function (marker) {
+//                            //showinfowindow not needed?
+////    marker.showInfoWindow();
+//                        });
+//                    };
+//
+//            var onError = function (msg) {
+//                alert("error: " + msg);
+//            };
+//            map.getMyLocation(onSuccess, onError);
+
+//additional
+
+//function onMapInit(map) {
+//
+//  // Show the map dialog when the button is clicked.
+//  var button = document.getElementById("button");
+//  button.addEventListener("click", function() {
+//
+//
+//
+//  map.showDialog();
+//  
+//  //added additional
+//   }, false);
+//});
+
+//working example========================
+    var map;
+    document.addEventListener("deviceready", function() {
+      var button = document.getElementById("button");
+      button.addEventListener("click", onBtnClicked, false);
+
+      var div = document.getElementById("map_canvas");
+      map = plugin.google.maps.Map.getMap(div);
+    }, false);
+    function onBtnClicked() {
+      map.showDialog();
+    }
+
+
+
+// show overlayed UCL map=======================================
+//                        var bounds = [
+//                            new plugin.google.maps.LatLng(51.52244, -0.13737),
+//                            new plugin.google.maps.LatLng(51.52090, -0.12338)
+//                        ];
+//                        
+//                        map.addGroundOverlay({
+//                            'url': "http://www.ucl.ac.uk/maps/downloads/ucl-bloomsbury-campus-map-2014",
+//                            'bounds': bounds,
+//                            'opacity': 0.5
+//                        }, function (groundOverlay) {
+//                            map.showDialog();
+//                            map.animateCamera({
+//                                'target': bounds
+//                            });
+//                        });
+//                    }
+
+        </script>
+        
+    </head>
+    <body>
+<!--        <div class="header">
+            <div class="item">UCL Art Gallery</div>
+             Buttons 
+            <div class ="menu">
+                <form action="home.html">
+                    <input type="submit" class="Headerbtn" value="&#xe604">
+                </form>
+                <form action="Search.html">
+                    <input type="submit" class="Headerbtn" value="&#xe606">
+                </form>
+                <form action="AppleMap.html">
+                    <input type="submit" class="Headerbtn" value="&#xe609">
+                </form>
+            </div>
+        </div>
+        <div id="grad" style="padding: 5%;"></div>-->
+        <!--working example-->
+                <h3>PhoneGap-GoogleMaps-Plugin</h3>
+                <!--<div style="width:100%;height:400px" id="map_canvas"></div>-->
+                <button id="button">Show</button>
+
+
+
+    </body>
+</html>
