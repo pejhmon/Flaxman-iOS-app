@@ -21,7 +21,7 @@ and open the template in the editor.
             window.onload = function(){
             var url = window.location.search;
             url = url.replace("?artwork=", ''); // remove the ?artwork=
-            alert(url); //alerts ProjectID=462 is your case
+            // alert(url); //alerts ProjectID=462 is your case
             var $artworks = { "artls": [
                 {
 //                "name": "amy",
@@ -37,7 +37,8 @@ and open the template in the editor.
                         "plaster"
                     ],
                     "image": "img/artwork/01stmichael.JPG",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "2",
@@ -52,7 +53,8 @@ and open the template in the editor.
                         "marble"
                     ],
                     "image": "img/artwork/02Lordsprayer.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "3",
@@ -67,7 +69,8 @@ and open the template in the editor.
                         "marble"
                     ],
                     "image": "img/artwork/03brahmin.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "4",
@@ -80,7 +83,8 @@ and open the template in the editor.
                         "mural"
                     ],
                     "image": "img/artwork/04four.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "5",
@@ -95,7 +99,8 @@ and open the template in the editor.
                         "canvas"
                     ],
                     "image": "img/artwork/05nativ.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "6",
@@ -110,7 +115,8 @@ and open the template in the editor.
                         "canvas"
                     ],
                     "image": "img/artwork/06undermilkwood.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "7",
@@ -125,7 +131,8 @@ and open the template in the editor.
                         "canvas"
                     ],
                     "image": "img/artwork/07nude.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "8",
@@ -140,7 +147,8 @@ and open the template in the editor.
                         "George Grote"
                     ],
                     "image": "img/artwork/08marmor.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "9",
@@ -153,7 +161,8 @@ and open the template in the editor.
                         "etching"
                     ],
                     "image": "img/artwork/09prosrome.jpg",
-                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Wilkins Building<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = wilkins.html style= \"text-decoration: none;\">Map</a>"
                 },
                 {
                     "id": "10",
@@ -166,7 +175,8 @@ and open the template in the editor.
                         "mural"
                     ],
                     "image": "img/artwork/10rust.jpg",
-                    "address": "Foster Court<br>University of London, University College London<br>Malet Pl<br>London"
+                    "address": "Foster Court<br>University of London, University College London<br>Malet Pl<br>London",
+                    "mapdd": "<a href = rusticscene.html style= \"text-decoration: none;\">Map</a>"
                 }
             ]};
 
@@ -177,7 +187,9 @@ and open the template in the editor.
             document.getElementById("partist").innerHTML = obj.artls[url].artist;
             imgurl = obj.artls[url].image;
             var dtimg= document.getElementById("dtimg");
-        document.getElementById("paddress").innerHTML = obj.artls[url].location;    
+        document.getElementById("paddress").innerHTML = obj.artls[url].location;
+
+        document.getElementById("pmap").innerHTML = obj.artls[url].mapdd;    
         document.getElementById("pdes").innerHTML = obj.artls[url].description;
 
 function insertHTMLImage() {
@@ -260,7 +272,7 @@ function insertHTMLImage() {
             <div class="item">Flaxman Art Gallery</div>
             <!-- Buttons -->
             <div class ="menu">
-                <form action="home.html">
+                <form action="index.html">
                     <input type="submit" class="Headerbtn" value="&#xe604">
                 </form>
                 <form action="searchresults.html">
@@ -283,6 +295,7 @@ function insertHTMLImage() {
         </div>
                 <div>   
                 <h5 id="paddress"> </h5>
+                <p id="pmap">Map</p>
                 </div>        
 
             <h5 id="pdes">
