@@ -78,6 +78,7 @@ body {
     width: -2%;
     height:auto;
     padding-bottom: 4%;
+    padding-top: 2%;
 }
 
 
@@ -88,9 +89,7 @@ body {
     /*margin:50px;*/
     width: 100%;
     color: white;
-    background: #343333;
-    /*opacity: 0.1;*/
-    box-shadow: 0 0 10px #343333;
+    background-color: transparent;
 }
 
 .container {
