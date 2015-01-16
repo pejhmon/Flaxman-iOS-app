@@ -7,13 +7,14 @@ and open the template in the editor.
 
 
 <root>
-        <widget id="com.example.hello" version="0.0.1">
-        <name>HelloWorld</name>
+        <widget id="com.coolappz.HTML5Application" version="0.0.1">
+        <name>UCL Art Museum</name>
         <description>
-            A sample Apache Cordova application that responds to the deviceready event.
+            Navigation app to discover artworks belonging to the Flaxman Art Gallery within UCL Campus.
         </description>
-        <author email="dev@callback.apache.org" href="http://phonegap.com">
-            Apache Cordova Team
+        <author email="zcahg73@ucl.ac.uk">
+            MSc Computer Science Group 20
+            Group Leader: Pejhmon Kamaie
         </author>
         <content src="index.html" />
         <access origin="*" />
